@@ -1,85 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<!-- Link to stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/mainstyle.css"/>
+		
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
 		
-		<meta charset="utf-8">
-		<title>Portfolio</title>
-		
-		<!--jQuery 3.3.1-->
+		<script src="scripts/mainscript.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			function showPopup(url){
-				$("#overlayPage").removeClass("hidden");
-				$("#popupPage").attr('src',url);
-			}
-			
-			function closePopup(){
-				$("#overlayPage").addClass("hidden");
-				$("#popupPage").attr('src',"about:blank");
-			}
-			
-			function showImage(addr){
-				$("#overlayImage").removeClass("hidden");
-				$("#fullImage").attr('src',addr);
-			}
-			
-			function closeImage(){
-				$("#overlayImage").addClass("hidden");
-			}
-			
-		</script>
 	</head>
-	<body>
-			
-		<div class="projectContainer">
+
+	<body onload="readTextFile('pages/maincontent.html')">
+	
+		<div class="nav">
+			<ul class="navbar">
+				<li id = homeTab><a>Home</a></li>
+				<li id = projTab><a>Projects</a></li>
+				<li id = artTab><a>Art</a></li>
+			</ul>
+		</div>
 		
-			<!-- Taode -->
-			<div class="newProjectContent" onclick="showImage('media/img/taode_portrait.png')">
-				<img src="media/img/taode_portrait.png" alt="project picture">
-				<div class="projectInfo">
-					<h3>Portrait</h3>
-					<p>Watercolour & Ink, A4 <br> 13/03/2018</p>
-				</div>
-			</div>
-			
-			<!-- Peaks -->
-			<div class="newProjectContent" onclick="showPopup('popup_pages/purple_peaks_popup.html')">
-				<img src="media/img/purple_peaks.png" alt="project picture">
-				<div class="projectInfo">
-					<h3>Peaks</h3>
-					<p>Watercolour & Ink, A4 <br> 26/05/2018</p>
-				</div>
-			</div>
-			
-			<!--Ginjen River -->
-			<div class="newProjectContent" onclick="showImage('media/img/river_bend.png')">
-				<img src="media/img/river_bend.png" alt="project picture">
-				<div class="projectInfo">
-					<h3>Ginjen</h3>
-					<p>Watercolour & Gouache, A4 <br> 29/07/2018</p>
-				</div>
-			</div>
-			
-			<!--Coming soon panel-->
-			<div class="newProjectContent" id="comingSoon">
-				<img src="media/img/coming_soon.png" alt="Coming Soon">
-				<div class="projectInfo">
-					<h3>More to come...</h3>
-				</div>
-			</div>
-		</div>
-		<br><hr><br>
-		
-		<!--Popup containing another html page-->
-		<div class="overlay hidden" id="overlayPage" onclick="closePopup()">
-			<iframe src="about:blank" class="popupContent" id="popupPage"></iframe>
-		</div>
-		<!--Popup containing full size image-->
-		<div class="overlay hidden" id="overlayImage" onclick="closeImage()">
-			<img src="" alt="full size image" class="popupContent" id="fullImage"></img>
-		</div>
+		<iframe id="contentContainer" frameborder="0"></iframe>
 	</body>
 </html>

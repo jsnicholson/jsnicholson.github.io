@@ -9,14 +9,6 @@ hr {
 }
 
 .projectContainer {
-	/*display:flex;
-	flex-flow:row wrap;
-	justify-content:space-around;
-	align-items:stretch;
-	-webkit-justify-content:space-around;
-	-webkit-flex-flow:row wrap;
-	-webkit-align-items:stretch;
-	padding-left:20px;*/
 	float:left;
 	margin-top:10px;
 	margin-left:0px;
@@ -32,7 +24,7 @@ hr {
 	vertical-align:top;
 	margin:10px;
 	padding:0px;
-	padding-left:75px;
+	padding-left:55px;
 	
 	width:10px;
 	height:300px;
@@ -41,7 +33,7 @@ hr {
 }
 
 .titleText {
-	font-size:48px;
+	font-size:35px;
 	text-align:center;
 	transform-origin:top left;
 	transform:rotate(90deg);

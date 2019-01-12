@@ -1,0 +1,13 @@
+body {
+	font-family: Roboto;
+	font-weight:300;
+	color:#ffffff;
+}
+
+hr {
+	border-color:#286090;
+}
+
+#mainimg {
+	width:25%;
+}

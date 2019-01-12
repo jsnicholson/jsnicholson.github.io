@@ -6,19 +6,25 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
 		
 		<script src="scripts/mainscript.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 
-	<body onload="readTextFile('pages/maincontent.html')">
+	<body>
 	
-		<div class="nav">
-			<ul class="navbar">
-				<li id = homeTab><a>Home</a></li>
-				<li id = projTab><a>Projects</a></li>
-				<li id = artTab><a>Art</a></li>
-			</ul>
-		</div>
+		<div id="nav"></div>
 		
-		<iframe id="contentContainer" frameborder="0"></iframe>
+		<div id="aboutMe">
+			<h2>About Me</h2>
+			<p>sjoidpfpioaswmefmaefpeof</p>
+		</div>
+				
+		<div id="contentContainer"></div>
+		
+		<script>
+			$(function(){
+			  $("#nav").load("pages/navbar.html");
+			  $("#contentContainer").load("pages/mainContent.html");
+			});
+		</script>
 	</body>
 </html>

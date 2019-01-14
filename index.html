@@ -7,24 +7,33 @@
 		
 		<script src="scripts/mainscript.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		
+		<title>Joshua Nicholson</title>
 	</head>
 
-	<body>
-	
+	<body>	
 		<div id="nav"></div>
 		
-		<div id="aboutMe">
-			<h2>About Me</h2>
-			<p>info</p>
+		<div id="bodyContainer">
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<p class="panel-title">About Me</p>
+				</div>
+				<div class="panel-body">
+					info
+				</div>				
+			</div>
+					
+			<div id="contentContainer"></div>
+			
+			<script>
+				$(function(){
+				  $("#nav").load("pages/navbar.html");
+				  $("#contentContainer").load("pages/maincontent.html");
+				});
+			</script> 
+			
 		</div>
-				
-		<div id="contentContainer"></div>
-		
-		<script>
-			$(function(){
-			  $("#nav").load("pages/navbar.html");
-			  $("#contentContainer").load("pages/maincontent.html");
-			});
-		</script>
 	</body>
 </html>

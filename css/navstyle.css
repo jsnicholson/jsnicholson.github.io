@@ -1,26 +1,35 @@
-.nav {
+.navbg {
 	width:100%;
 }
 
 .navbar{
-	list-style-type:none;
-	margin:0;
-	padding:0;
 	overflow:hidden;
-	background-color:#286090;
+	
 	height:60px;
+	
+	margin:0px;
+	padding-left:15%;
+	
+	background-color:#286090;
+	list-style-type:none;		
 }
 
 .navbar li {
     float:left;
+	
+	height:100%;
+	
 	vertical-align:middle;
 }
 
 .navbar li a {
     display:block;
+	
+	padding:18px 16px;
+	
     color:white;
-    text-align:center;
-    padding:14px 16px;
+	font-size:20px;
+    text-align:center;  
     text-decoration:none;
 }
 

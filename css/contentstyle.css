@@ -9,6 +9,23 @@ hr {
 	width:100%;
 }
 
+.link {
+	color:#fff;
+	text-decoration:none;
+}
+
+.link:hover {
+	color:#0ce3ac;
+	cursor:pointer;
+}
+
+.anchor::before {
+	display:block;
+	position:relative;
+	width:0;
+	height:20px;
+}
+
 .panel-category {
 	width:150px;
 	
@@ -25,7 +42,7 @@ hr {
 }
 
 .projectContainer {
-	margin-bottom:40px;
+	margin-bottom:30px;
 	
 	border-top:1px solid #286090;
 	
@@ -36,7 +53,7 @@ hr {
 	display:inline-block;
 	position:relative;
 	vertical-align:top;
-	margin:20px 20px 10px 0px;
+	margin:20px 20px 20px 0px;
 	
 	width:250px;
 	height:300px;
@@ -56,22 +73,21 @@ hr {
 	border-radius:5px 5px 0px 0px;
 }
 
-.projectInfo {
-	display:inline-block;
-	padding:10px;
-	
+.projectInfoContainer {	
 	width:250px;
-	height:60px;
+	height:60px;	
 }
 
-.projectInfo h3 {
+.projectInfoContent {
+	padding:10px;
+}
+
+.projectInfoContent h3 {
 	font-size:1em;
-	color:#fff;
 	margin:0;
 }
 
-.projectInfo p {
+.projectInfoContent p {
 	font-size:0.75em;
-	color:#fff;
 	margin:0;
 }

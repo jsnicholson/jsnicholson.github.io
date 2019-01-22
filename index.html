@@ -2,19 +2,21 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/mainstyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/contentstyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/navstyle.css"/>
 		
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
 		
 		<script src="scripts/mainscript.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		
-		<title>Joshua Nicholson</title>
+		<title>Josh Nicholson</title>
 	</head>
 
-	<body>	
-		<div id="nav"></div>
+	<body>
+		<div id="nav-container"></div>
 		
-		<div id="bodyContainer">
+		<div id="body-container">
 			
 			<div class="panel panel-primary">
 				<div class="panel-heading">
@@ -22,17 +24,17 @@
 				</div>
 				<div class="panel-body">
 					info
-				</div>				
+				</div>
 			</div>
-					
-			<div id="contentContainer"></div>
+			
+			<div id="content-container"></div>
 			
 			<script>
 				$(function(){
-				  $("#nav").load("pages/navbar.html");
-				  $("#contentContainer").load("pages/maincontent.html");
+				  $("#nav-container").load("pages/navbar.html");
+				  $("#content-container").load("pages/maincontent.html");
 				});
-			</script> 
+			</script>
 			
 		</div>
 	</body>

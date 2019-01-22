@@ -10,8 +10,15 @@ hr {
 	color:#286090;
 }
 
-#bodyContainer {
-	margin:20px 15% 10px 15%;
+#nav-container {
+	position:fixed;
+	z-index:200;
+	width:100%;
+	top:0px;
+}
+
+#body-container {
+	margin:60px 15% 10px 15%;
 	padding:10px;
 }
 

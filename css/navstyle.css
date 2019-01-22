@@ -1,3 +1,8 @@
+#logo img {
+	height:30px;
+	margin:7px;
+}
+
 .navbg {
 	width:100%;
 }
@@ -5,7 +10,7 @@
 .navbar{
 	overflow:hidden;
 	
-	height:60px;
+	height:44px;
 	
 	margin:0px;
 	padding-left:15%;
@@ -25,14 +30,15 @@
 .navbar li a {
     display:block;
 	
-	padding:18px 16px;
+	padding:10px 16px;
 	
     color:white;
 	font-size:20px;
     text-align:center;  
     text-decoration:none;
+	cursor:pointer;
 }
 
-.navbar li a:hover:not(.active) {
-    background-color:#28415b;
+.navbar li a:hover {
+    color:#0ce3ac;
 }

@@ -1,0 +1,108 @@
+/*!
+ * Start Bootstrap - 4 Col Portfolio (https://startbootstrap.com/template-overviews/4-col-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-4-col-portfolio/blob/master/LICENSE)
+ */
+
+body {
+	padding-top:78px;
+
+	background-color:#222222;
+
+	font-family:Roboto;
+	font-weight:300;
+	color:#fff;
+}
+
+hr {
+	border-color:#286090;
+	width:100%;
+	margin:0px 15px 15px 15px;
+}
+
+p+ul {
+	margin-top:-10px;
+	margin-bottom:20px;
+}
+
+/**
+	FONTS
+**/
+.font-large {
+	font-size:1.5rem;
+}
+
+.font-medium {
+	font-size:1.25rem;
+}
+
+/**
+	MARGINS
+**/
+.top-margin {
+	margin-top:30px;
+}
+
+.bottom-margin {
+	margin-bottom:30px;
+}
+
+/**
+	PORTFOLIO SPECIFIC
+**/
+.portfolio-category {
+	margin:0px 15px 0px 15px;
+	padding:10px;
+	
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+/**
+	TRANSISTIONS
+**/
+.transistion-pickup {
+	transition:transform .2s ease-in-out;
+}
+
+.transistion-pickup:hover{
+	position:relative;
+	transform:translate3d(-10px, -10px, 0px);
+}
+
+/**
+	LINKS
+**/
+.link {
+	text-decoration:none;
+	color:#fff;
+}
+
+.link:hover {
+	text-decoration:none;
+	color:#0ce3ac;
+	cursor:pointer;
+}
+
+/**
+	CARDS
+**/
+.card-header {
+	padding:10px;
+}
+
+.card-body {
+	padding:10px;
+}
+
+.card-title {
+	margin-bottom:0px;
+}
+
+/**
+	CAROUSEL
+**/
+.carousel-inner > .carousel-item > img {
+	margin:20px auto;
+	height:460px;
+}

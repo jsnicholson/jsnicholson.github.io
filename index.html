@@ -1,43 +1,82 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/mainstyle.css"/>
-		<link rel="stylesheet" type="text/css" href="css/contentstyle.css"/>
-		<link rel="stylesheet" type="text/css" href="css/navstyle.css"/>
-		
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
-		
-		<script src="scripts/mainscript.js"></script>
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		
-		<title>Josh Nicholson</title>
-	</head>
+<html lang="en">
 
-	<body>
-		<div id="nav-container"></div>
-		
-		<div id="body-container">
-			
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<p class="panel-title">About Me</p>
-				</div>
-				<div class="panel-body">
-					Hi I'm Josh, a Computer Science undergraduate currently in my second year at the University of Nottingham.<br>
-					<br>
-					<a class="btn btn-link" href="/media/CV 2018.pdf" download>Download my CV</a>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Josh Nicholson</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/bootstrap-min-darkly-plus.css" rel="stylesheet">
+	
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+	<div id="nav-row"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+	
+		<!-- About Me Card -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card border-primary top-margin bottom-margin">
+					<div class="card-header bg-primary font-large">About me</div>
+					<div class="card-body">
+						Hi I'm Josh, a Computer Science undergraduate currently in my second year at the University of Nottingham.
+					</div>
 				</div>
 			</div>
-			
-			<div id="content-container"></div>
-			
-			<script>
-				$(function(){
-				  $("#nav-container").load("pages/navbar.html");
-				  $("#content-container").load("pages/maincontent.html");
-				});
-			</script>
-			
 		</div>
-	</body>
+		
+		<!-- Project Category Title -->
+		<div class="row">
+			<div id="project-anchor" class="col-lg-2 col-md-3 portfolio-category bg-primary font-large">Projects</div>
+			<hr>
+		</div>
+		<!-- Project Panels -->
+		<div class="row" id="project-row"></div>
+		
+		<!-- Art Category Title -->
+		<div class="row">
+			<div id="art-anchor" class="col-lg-2 col-md-3 portfolio-category bg-primary font-large">Art</div>
+			<hr>
+		</div>
+		<!-- Art Panels -->
+		<div class="row" id="art-row"></div>
+  
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <div class="row-fluid" id="footer-row"></div>
+	
+	<!-- Load Rows -->
+	<script>
+		$(function(){
+			$("#nav-row").load("nav/nav.html");
+			$("#project-row").load("projects/project-row.html");
+			$("#art-row").load("art/art-row.html");
+			$("#footer-row").load("footer/footer.html");
+		});
+	</script>
+
+  </body>
+
 </html>

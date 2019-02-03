@@ -1,6 +1,0 @@
-main font:#fff;
-alt font:#222222;
-body background:#222222;
-primary background:#286090;
-warning background:#f39c12;
-link:#0ce3ac;

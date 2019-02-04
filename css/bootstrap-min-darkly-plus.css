@@ -125,3 +125,11 @@ p+ul {
 		height:450px;
 	}
 }
+
+/**
+	ICONS
+**/
+.fab {
+	margin-left:10px;
+	color:#fff;
+}

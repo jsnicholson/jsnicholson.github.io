@@ -101,6 +101,11 @@ p+ul {
 /**
 	CAROUSEL
 **/
+.carousel-caption > .badge{
+    font-size:1em;
+	font-weight:100;
+}
+
 .carousel-inner > .carousel-item > img {
 	margin:auto;
 	height:200px;

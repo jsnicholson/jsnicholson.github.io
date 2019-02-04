@@ -4,7 +4,7 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -34,24 +34,45 @@
 	
 	<div class="row">
 		<div class="col-lg-12">
-			<p class="top-margin font-large">Tetris <span class="badge badge-pill badge-secondary">08/11/2018</span></p>
-			<p>A project to explore runtime mesh generation, noise, shaders and more</p>
+			<p class="top-margin font-large">Tetris <span class="badge badge-pill badge-secondary">25/01/2019</span></p>
+			<p>A recreation of Tetris with a few additional features</p>
+			<p>The first of many projects for a classic game suite</p>
+			<p>A 1.0 version is not quite ready so please take a look at other branches to see progress</p>
 			<a class="btn btn-primary" href="https://github.com/jsnicholson/Game-Suite">Git Repository</a> 
 		</div>
 	</div>
 	
 	<div class="row">
 		<div class="col-lg-12">
-		
-			<div class="card top-margin bottom-margin">
-				<div class="card-body text-center">
-					<img src="/media/img/full/proceduralterrain_landscape.png" class="img-fluid rounded" alt="terrain-widescreen" style="height:400px;">
+			<div id="carouselExample" class="carousel slide top-margin" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+				</ol>
+
+				<!-- Wrapper for slides, put your images there -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="/projects/tetris/media/img/tetris_main.png" class="d-block" alt="board">
+						<div class="carousel-caption"><span class="badge badge-secondary"></span></div>
+					</div>
+
 				</div>
-				<div class="card-footer">
-					Caption
-				</div>
-			</div>			
-			
+
+				<!-- Controls -->
+				<a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">			
 			<div class="card border-warning top-margin bottom-margin">
 				<div class="card-header bg-warning font-large">Project Notice</div>
 				<div class="card-body">
@@ -63,45 +84,49 @@
 				<div class="card-header bg-primary font-large">Breakdown</div>
 				<div class="card-body">
 					<p class="font-large">Current Features</p>
-					<p>Scalable in chunks
+					<p>Super Rotation System (SRS)
 						<ul>
-							<li>Vertexes per chunk</li>
-							<li>Number of chunks</li>
-						</ul>
-					<p>
-					
-					<p>Fully customisable noise
-						<ul>
-							<li>Using layered perlin with octaves</li>
+							<li>Take a look at the <a href="https://tetris.wiki/SRS">wiki</a> for more information</li>
+							<li>Currently have both wall kicks and floor kicks implemented</li>
 						</ul>
 					</p>
 					
-					<p>Customisable falloff-map for creating islands
+					<p>Colour palette swapping
 						<ul>
-							<li>Currently with circular and square falloff</li>
+							<li>4 grayscale shades are used and then swapped at runtime using a shader</li>
+							<li>Variety of palettes currently created with easy addition</li>
 						</ul>
 					</p>
 					
-					<p>Lowpoly artstyle with uniform lighting and colour per face</p>
-					<p>Gradient colour with key system</p>
-					<p>Simple water with reflection and refraction</p>
-					
-					<p class="font-large">Known Issues</p>
-					<p>Low frame rate due to high vertex count</p>
-					<p>Falloff customisation still limited</p>
-					<p>Colour system is still clunky</p>
+					<p>Tetromino Builder to create tetromino's based on any given tile
+						<ul>
+							<li>This will allow for unlockable tiles for further customisation later</li>
+						</ul>
+					</p>
 					
 					<p class="font-large">Planned Features</p>
-					<p>LOD system to lower vertex count at further distances</p>
-					<p>Gradient editor for terrain colour</p>
-					<p style="margin-bottom:10px">Water effects
+					<p>Holding keys for continued movement</p>
+					
+					<p>Row clearing on landing</p>
+					
+					<p>Scoring
 						<ul>
-							<li>Depth blur</li>
-							<li>Edge blur</li>
-							<li>Lowpoly lighting</li>
-							<li>Blueness</li>
+							<li>Points for rows cleared</li>
+							<li>Additional if pieces moved downwards manually</li>
 						</ul>
 					</p>
+					
+					<p>Game over screen</p>
+					
+					<p>Score saving</p>
+					
+					<p>Unlocking palettes</p>
+					
+					<p class="font-large">Known Issues</p>
+					<p>Game still in early stages so not enough features<p>
+					
+					<p>UI not properly scaling</p>
+					
 				</div>
 			</div>
 		</div>

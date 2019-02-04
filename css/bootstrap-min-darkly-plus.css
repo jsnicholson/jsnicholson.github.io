@@ -6,15 +6,12 @@
 body {
 	padding-top:72px;
 
-	background-color:#222222;
-
 	font-family:Roboto;
 	font-weight:300;
 	color:#fff;
 }
 
 hr {
-	border-color:#286090;
 	width:100%;
 	margin:0px 15px 15px 15px;
 }
@@ -33,6 +30,14 @@ p+ul {
 
 .font-medium {
 	font-size:1.25rem;
+}
+
+.font-black {
+	color:#000;
+}
+
+.font-white {
+	color:#fff;
 }
 
 /**

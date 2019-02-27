@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vector Movement</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/media/favicon.ico"/>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/bootstrap-min-darkly-plus.css" rel="stylesheet">
+	
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400i,400,100" rel="stylesheet">
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+  </head>
+
+  <body>
+
+	<!-- Navigation -->
+	<div id="nav-row"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="top-margin font-large">Vector Movement 
+			<span class="badge badge-pill badge-secondary">12/12/2018</span>
+			
+			<p>A vector movement system created for university coursework</p>
+			<a class="btn btn-primary" href="https://github.com/jsnicholson/Game-Suite">Git Repository</a> 
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">			
+			
+			<div class="card border-primary top-margin">
+				<div class="card-header bg-primary font-large">Task Brief</div>
+				<div class="card-body">
+					<p>We were tasked with refactoring a pacman project created in a previous year</p>
+					<p>One thing in particular I wished to change was the movement system
+						<ul>
+							<li>It was using a poorly done and confusing floating system</li>
+							<li>Pacman and ghosts moved linearly in undefined spaces between walls</li>
+						</ul>
+					</p>
+					
+					<p>I wished to implement a vector based movement system
+						<ul>
+							<li>The level would be represented as a grid array with clear paths for entities to move in</li>
+							<li>Entities would move between grid squares fluidly without floating in-between</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- /.row -->
+	
+	<div class="row">
+		<div class="col-lg-12">				
+			<div class="card border-primary top-margin">
+				<div class="card-header bg-primary font-large">Vector2</div>
+				<div class="card-body">			
+					<p>I created a vector class that would define (x, y) coordinate pairs and make my life easier<br>
+					<a data-toggle="collapse" href="#entity-code">Click here for the code!</a></p>
+					
+					<div id="entity-code"class="collapse">
+						<script src="https://gist.github.com/jsnicholson/641d4305dc48b657e6558d37f3778004.js"></script>
+					</div>
+					
+					<p>This class implemented a variety of behaviours
+						<ul>
+							<li>Stored 2 public doubles that would serve (in our case) as x and y coordinates</li>
+							<li>Provided some static Vector2s that represented cardinal directions (very helpful in better relaying what code does in later code</li>
+							<li>Allowed for comparison of two Vector2s as well as standard operations (+, -, *, /) either by another Vector2 or by a constant value</li>
+							<li>Linear interpolation between two Vector2s</li>
+							<li>Straight line distance between two Vector2s</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- /.row -->
+	
+	<div class="row">
+		<div class="col-lg-12">				
+			<div class="card border-primary top-margin bottom-margin">
+				<div class="card-header bg-primary font-large">MoveableEntity</div>
+				<div class="card-body">			
+					<p>Using Vector2, I created a superclass to be inherited by any moving entity on the grid<br>
+					<a data-toggle="collapse" href="#vector-code">Click here for the code!</a></p>
+					
+					<div id="vector-code"class="collapse">
+						<script src="https://gist.github.com/jsnicholson/c9aac0b960bbb4edc54087a8c7af1688.js"></script>
+					</div>
+					
+					<p>This class provided an animation (the way we had been sugggested to create in Java) that repeatedly gets 
+					key input and then linear interpolates to the next grid square</p>
+					<p>Inline comments should provide a reasonable understanding of hows it's being done</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <div id="footer-row"></div>
+
+	<script>
+		$(function(){
+			$("#nav-row").load("/nav/nav.html");
+			$("#footer-row").load("/footer/footer.html");
+		});
+	</script>
+	
+  </body>
+
+</html>

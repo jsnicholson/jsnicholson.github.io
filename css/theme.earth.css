@@ -23,5 +23,10 @@ section:nth-child(odd) {
 section:nth-child(even) {
     background-color: var(--color-accent-light);
 }
+
+footer {
+    background-color: var(--color-accent-dark);
+    color: var(--color-light);
+}
 /* classes */
 /* ids */

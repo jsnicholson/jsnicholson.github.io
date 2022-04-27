@@ -4,16 +4,24 @@
 */
 :root {
     --color-light:#e3e1da;
-    --color-accent-light:#ccc;
-    --color-brand:#888;
+    --color-accent-light:#c1b8ab;
+    --color-brand:#9e8d7b;
     --color-accent-dark:#444;
-    --color-dark:#000;
+    --color-dark:#53493d;
 }
 
 /* elements */
 body {
     background-color: var(--color-light);
+    color:var(--color-dark);
 }
 
+section:nth-child(odd) {
+    background-color: var(--color-light);
+}
+
+section:nth-child(even) {
+    background-color: var(--color-accent-light);
+}
 /* classes */
 /* ids */

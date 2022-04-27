@@ -1,0 +1,19 @@
+/*
+    only colour information is defined in this stylesheet
+    for position, margins etc. see 'main.css'
+*/
+:root {
+    --color-light:#fff;
+    --color-accent-light:#ccc;
+    --color-brand:#888;
+    --color-accent-dark:#444;
+    --color-dark:#000;
+}
+
+/* elements */
+body {
+    background-color: var(--color-light);
+}
+
+/* classes */
+/* ids */

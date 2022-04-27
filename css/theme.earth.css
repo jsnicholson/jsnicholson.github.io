@@ -1,0 +1,32 @@
+/*
+    only colour information is defined in this stylesheet
+    for position, margins etc. see 'main.css'
+*/
+:root {
+    --color-light:#e3e1da;
+    --color-accent-light:#c1b8ab;
+    --color-brand:#9e8d7b;
+    --color-accent-dark:#444;
+    --color-dark:#53493d;
+}
+
+/* elements */
+body {
+    background-color: var(--color-light);
+    color:var(--color-dark);
+}
+
+section:nth-child(odd) {
+    background-color: var(--color-light);
+}
+
+section:nth-child(even) {
+    background-color: var(--color-accent-light);
+}
+
+footer {
+    background-color: var(--color-accent-dark);
+    color: var(--color-light);
+}
+/* classes */
+/* ids */

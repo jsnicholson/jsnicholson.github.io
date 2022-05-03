@@ -8,6 +8,7 @@ html {
 section {
     width:100%;
     display:flex;
+    position:relative;
 }
 
 footer {
@@ -29,5 +30,12 @@ h1 {
 
 .height-60 {
     min-height:60vh;
+}
+
+.local-scroll {
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0);
+    bottom:1em;
 }
 /* ids */

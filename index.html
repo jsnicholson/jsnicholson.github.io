@@ -9,6 +9,7 @@
         <!-- stylesheets -->
             <!-- vendor-->
             <link href="vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="vendor/aos/css/aos.css" rel="stylesheet"/>
             <!-- custom -->
             <link href="css/main.css" rel="stylesheet"/>
             <link href="css/theme.earth.css" rel="stylesheet"/>
@@ -29,8 +30,8 @@
             <section class="height-100 align-items-center p-4 px-md-5">
                 <div class="container">
                     <div class="row">
-                        <h1>Joshua Nicholson</h1>
-                        <h5>Software Consultant</h5>
+                        <h1 data-aos="fade-left">Joshua Nicholson</h1>
+                        <h5 data-aos="fade-left" data-aos-delay="50">Software Consultant</h5>
                     </div>
                 </div>
                 <img src="assets/icon/chevron_down.svg" class="local-scroll" onclick="ScrollTo('aboutme')"/>
@@ -40,15 +41,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 text-end mb-2 mb-md-0">
-                            <h1>About<br>Me</h1>
+                            <h1 data-aos="fade">About<br>Me</h1>
                         </div>
                         <div class="col-md-6 offset-md-1">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                    <p>I've always had the itch to solve my problems with computing solutions. Now I get to expand that to other people<br><br>I graduated from the <b>University of Nottingham</b> with a <b>first class degree</b> in 2021 and have since been pursuing a career in software engineering</p>
+                                    <p data-aos="fade" data-aos-delay="50">I've always had the itch to solve my problems with computing solutions. Now I get to expand that to other people<br><br>I graduated from the <b>University of Nottingham</b> with a <b>first class degree</b> in 2021 and have since been pursuing a career in software engineering</p>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <p>Since graduation I've been employed at <b>Netcompany</b> as a <b>Software Consultant</b>, releasing major public sector projects. I am always striving to learn new technologies, developing my understanding, and <b>improving my craft</b><br><br>Outside work I continue to develop a number of side projects, but also bounce around a number of crafts (including art which you can see some of below)</p>
+                                    <p data-aos="fade" data-aos-delay="100">Since graduation I've been employed at <b>Netcompany</b> as a <b>Software Consultant</b>, releasing major public sector projects. I am always striving to learn new technologies, developing my understanding, and <b>improving my craft</b><br><br>Outside work I continue to develop a number of side projects, but also bounce around a number of crafts (including art which you can see some of below)</p>
                                 </div>
                             </div>
                         </div>
@@ -60,15 +61,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col mb-4">
-                            <h1>Curriculum Vitae</h1>
+                            <h1 data-aos="fade">Curriculum Vitae</h1>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="fade" data-aos-delay="50">
                         <div class="col">
                             <p>If you'd like to see what skills and experience I have, a pretty, and a condensed pdf version of my CV are available. </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="fade" data-aos-delay="50">
                         <div class="col">
                             <a href="cv" class="btn btn-outline" style="padding:20px 40px;"><h5 style="margin:0px;">View CV</h5></a>
                         </div>
@@ -79,6 +80,14 @@
             <!-- portfolio section-->
         </main>
         <footer id="footer"></footer>
+        <!-- initialise animate on scroll lib -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration:1000,
+                once:true,
+            });
+        </script>
     </body>
     <!-- startup script to load common content -->
     <script>

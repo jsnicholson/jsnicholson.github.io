@@ -38,4 +38,10 @@ h1 {
     transform:translate(-50%,0);
     bottom:1em;
 }
+
+.btn-back {
+    position:absolute;
+    left:1em;
+    top:1em;
+}
 /* ids */

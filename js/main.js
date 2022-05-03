@@ -15,5 +15,5 @@ function ScrollTop() {
 }
 
 function BackToHome() {
-    window.location.href = "/index";
+    window.location.href = "/";
 }

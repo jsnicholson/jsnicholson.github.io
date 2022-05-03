@@ -11,10 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-main {
-    width:100%;
-}
-
 section {
     width:100%;
     display:flex;

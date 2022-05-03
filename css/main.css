@@ -17,6 +17,10 @@ section {
     position:relative;
 }
 
+section:last-of-type {
+    padding-bottom:3rem !important; 
+}
+
 footer {
     padding:20px;
 }

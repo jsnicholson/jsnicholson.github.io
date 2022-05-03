@@ -5,6 +5,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    width:100%;
+}
+
+main {
+    width:100%;
+}
+
 section {
     width:100%;
     display:flex;

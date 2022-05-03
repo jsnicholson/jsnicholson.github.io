@@ -17,3 +17,10 @@ function ScrollTop() {
 function BackToHome() {
     window.location.href = "/";
 }
+
+window.onload = function(){
+    AOS.init({
+        duration:1000,
+        once:true,
+    });
+}

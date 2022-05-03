@@ -20,6 +20,7 @@
             <!-- vendor -->
             <script src="vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
             <script src="vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
+            <script src="vendor/aos/js/aos.js"></script>
             <!-- custom -->
             <script src="js/main.js"></script>
     </head>
@@ -34,7 +35,6 @@
                         <h5 data-aos="fade-left" data-aos-delay="50">Education, Experience, and Skills</h5>
                     </div>
                     <img src="assets/icon/arrow_back.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
-                    <div class="local-scroll"><img src="assets/icon/chevron_down.svg" onclick="ScrollTo('education')" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom"/></div>
                 </div>
             </section>
             <!-- education section -->
@@ -88,19 +88,19 @@
                         </div>
                     </div>
                 </div>
-                <img src="assets/icon/chevron_up.svg" class="local-scroll" onclick="ScrollTop()"/>
             </section>
             <!-- skills section-->
+            <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 data-aos="fade">Skills</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer id="footer"></footer>
-        <!-- initialise animate on scroll lib -->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration:1000,
-                once:true,
-            });
-        </script>
     </body>
     <!-- startup script to load common content -->
     <script>

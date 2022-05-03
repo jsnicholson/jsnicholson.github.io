@@ -18,6 +18,7 @@
         <!-- scripts -->
             <!-- vendor -->
             <script src="vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
+            <script src="vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
             <!-- custom -->
             <script src="js/main.js"></script>
     </head>
@@ -25,28 +26,32 @@
         <nav></nav>
         <main>
             <!-- title section -->
-            <section class="height-80 align-items-center p-4 px-md-5">
+            <section class="height-100 align-items-center p-4 px-md-5">
                 <div class="container">
                     <div class="row">
                         <h1>Curriculum Vitae</h1>
                         <h5>Education, Experience, and Skills</h5>
                     </div>
+                    <img src="assets/icon/arrow_down.svg" class="local-scroll" onclick="ScrollTo('education')"/>
                 </div>
             </section>
             <!-- education section -->
-            <section class="height-80 align-items-center p-4 px-md-5">
+            <section class="height-80 align-items-center p-4 px-md-5" id="education">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 text-align-right mb-2 mb-md-0">
-                            <h1>About<br>Me</h1>
+                        <div class="col-md-4 text-end mb-4 mb-md-0">
+                            <h1>Education</h1>
                         </div>
                         <div class="col-md-6 offset-md-1">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                    <p>A little bit of information over here. Probably needs a little more to pad it out completely so that the title isnt hanging over there by itself.</p>
+                                    <p>2017-2021&emsp;<b>Computer Science BSc (Hons)</b>&emsp;University of Nottingham</p>
+                                    <p>First class degree</p>
                                 </div>
+                                <hr>
                                 <div class="col-md-6 col-sm-6">
-                                    <p>Maybe some more in this paragraph. With the above block being longer this one probably should be too cause it looks a little ridiculous otherwise</p>
+                                    <p>2015-2017&emsp;<b>A-Levels</b>&emsp;St. Christopher's Sixth Form</p>
+                                    <p>Mathematics (A), Computer Science (A), Further Mathematics (C)</p>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +71,8 @@
                             <p>2021-present<br><b>Software Consultant</b><br>Netcompany</p>
                         </div>
                         <div class="col">
-                            <p>Some stuff about what I did here</p>
+                            <p>Came in as a generalist software consultant but quickly acquired additional responsibilities up to leading a team</p>
+                            <p>Worked on major public sector projects, maintained client relations, and delivering on-time</p>
                         </div>
                     </div>
                     <hr>
@@ -75,10 +81,12 @@
                             <p>2019-2020<br><b>Developer</b><br>Feral Interactive</p>
                         </div>
                         <div class="col">
-                            <p>Some stuff about what I did here</p>
+                            <p>Development on major mobile releases, from bug-fixing to full feature implementation</p>
+                            <p>Communication between departments to meet specification</p>
                         </div>
                     </div>
                 </div>
+                <img src="assets/icon/arrow_up.svg" class="local-scroll" onclick="ScrollTop()"/>
             </section>
             <!-- skills section-->
         </main>

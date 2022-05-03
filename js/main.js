@@ -6,9 +6,7 @@ function LoadHtmlInto(filename, id) {
 }
 
 function ScrollTo(id){
-    var element = document.getElementById(id);
-    element.scrollIntoView(true);
-    //$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+    document.getElementById(id).scrollIntoView(true);
 }
 
 function ScrollTop() {
@@ -17,5 +15,5 @@ function ScrollTop() {
 }
 
 function BackToHome() {
-    history.back();
+    window.location.href = "/index";
 }

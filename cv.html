@@ -9,6 +9,7 @@
         <!-- stylesheets -->
             <!-- vendor-->
             <link href="vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="vendor/aos/css/aos.css" rel="stylesheet"/>
             <!-- custom -->
             <link href="css/main.css" rel="stylesheet"/>
             <link href="css/theme.earth.css" rel="stylesheet"/>
@@ -29,27 +30,28 @@
             <section class="height-100 align-items-center p-4 px-md-5">
                 <div class="container">
                     <div class="row">
-                        <h1>Curriculum Vitae</h1>
-                        <h5>Education, Experience, and Skills</h5>
+                        <h1 data-aos="fade-left">Curriculum Vitae</h1>
+                        <h5 data-aos="fade-left" data-aos-delay="50">Education, Experience, and Skills</h5>
                     </div>
-                    <img src="assets/icon/arrow_down.svg" class="local-scroll" onclick="ScrollTo('education')"/>
+                    <img src="assets/icon/arrow_back.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left"/>
+                    <img src="assets/icon/chevron_down.svg" class="local-scroll" onclick="ScrollTo('education')"/>
                 </div>
             </section>
             <!-- education section -->
             <section class="height-80 align-items-center p-4 px-md-5" id="education">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 text-end mb-4 mb-md-0">
+                        <div class="col-md-4 text-end mb-4 mb-md-0" data-aos="fade">
                             <h1>Education</h1>
                         </div>
                         <div class="col-md-6 offset-md-1">
                             <div class="row">
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-6" data-aos="fade" data-aos-delay="50">
                                     <p>2017-2021&emsp;<b>Computer Science BSc (Hons)</b>&emsp;University of Nottingham</p>
                                     <p>First class degree</p>
                                 </div>
                                 <hr>
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-6" data-aos="fade" data-aos-delay="100">
                                     <p>2015-2017&emsp;<b>A-Levels</b>&emsp;St. Christopher's Sixth Form</p>
                                     <p>Mathematics (A), Computer Science (A), Further Mathematics (C)</p>
                                 </div>
@@ -62,11 +64,11 @@
             <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col mb-4 text-center">
+                        <div class="col mb-4 text-center" data-aos="fade">
                             <h1>Experience</h1>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="fade" data-aos-delay="50">
                         <div class="col col-md-3 offset-md-1">
                             <p>2021-present<br><b>Software Consultant</b><br>Netcompany</p>
                         </div>
@@ -76,7 +78,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="row">
+                    <div class="row" data-aos="fade" data-aos-delay="100">
                         <div class="col col-md-3 offset-md-1">
                             <p>2019-2020<br><b>Developer</b><br>Feral Interactive</p>
                         </div>
@@ -86,11 +88,19 @@
                         </div>
                     </div>
                 </div>
-                <img src="assets/icon/arrow_up.svg" class="local-scroll" onclick="ScrollTop()"/>
+                <img src="assets/icon/chevron_up.svg" class="local-scroll" onclick="ScrollTop()"/>
             </section>
             <!-- skills section-->
         </main>
         <footer id="footer"></footer>
+        <!-- initialise animate on scroll lib -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration:1000,
+                once:true,
+            });
+        </script>
     </body>
     <!-- startup script to load common content -->
     <script>

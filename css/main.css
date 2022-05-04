@@ -61,4 +61,15 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-weight:400;
 }
+
+.filters a {
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.filters a:active {
+    text-decoration:none;
+}
 /* ids */

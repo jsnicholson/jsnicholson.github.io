@@ -28,6 +28,14 @@ footer {
     background-color: var(--color-accent-dark);
     color: var(--color-light);
 }
+
+a {
+    color:var(--color-dark);
+}
+
+a:hover {
+    color:var(--color-dark);
+}
 /* classes */
 .btn:hover {
     background-color: var(--color-accent-dark);
@@ -51,5 +59,9 @@ footer {
 
 .text-dark {
     color:var(--color-dark);
+}
+
+.active {
+    font-weight:bold;
 }
 /* ids */

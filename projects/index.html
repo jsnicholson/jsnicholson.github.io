@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+        <!-- meta -->
+            <!-- required -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <!-- stylesheets -->
+            <!-- vendor-->
+            <link href="../vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="../vendor/aos/css/aos.css" rel="stylesheet"/>
+            <!-- custom -->
+            <link href="../css/main.css" rel="stylesheet"/>
+            <link href="../css/theme.earth.css" rel="stylesheet"/>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <!-- scripts -->
+            <!-- vendor -->
+            <script src="../vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
+            <script src="../vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
+            <script src="../vendor/aos/js/aos.js"></script>
+            <!-- custom -->
+            <script src="../js/main.js"></script>
+    </head>
+    <body>
+        <nav></nav>
+        <main>
+            <!-- title section -->
+            <section class="height-100 align-items-center p-4 px-md-5">
+                <div class="container">
+                    <div class="row">
+                        <h1 data-aos="fade-left">Projects</h1>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Industrial, Personal, and more</h5>
+                    </div>
+                    <img src="/assets/icon/arrow_back.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
+                </div>
+            </section>
+            <!-- education section -->
+            <section class="height-80 d-flex justify-content-center p-4 px-md-5">
+                <div class="container">
+                    <div class="row mt-3 mb-4">
+                        <div class="col-md-6 offset-md-1 align-items-end">
+                            <div id="filters" class="filters">
+                                <a onclick="FilterClicked(this)" data-filter=".row" class="active">All</a>
+                                <a onclick="FilterClicked(this)" data-filter=".highlighted">Highlighted</a>
+                                <a onclick="FilterClicked(this)" data-filter=".industry">Industry</a>
+                                <a onclick="FilterClicked(this)" data-filter=".code">Code</a>
+                                <a onclick="FilterClicked(this)" data-filter=".art">Art</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="portfolio-list">
+                            <div class="row industry highlighted">
+                                <div class="col-4 offset-md-2"><b>NHS Scotland Covid Passport</b></div>
+                                <div class="col-6 col-md-5">c#, xamarin, azure, devops</div>
+                                <hr style="margin-top:16px;">
+                            </div>
+                            <div class="row code highlighted">
+                                <div class="col-4 offset-md-2"><b>Notion Random Thought Integration</b></div>
+                                <div class="col-6 col-md-5">node.js, serverless function, REST</div>
+                                <hr style="margin-top:16px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </body>
+    <!-- startup script to load common content -->
+    <script>
+        LoadHtmlInto("/footer.html", "footer");
+    </script>
+</html>

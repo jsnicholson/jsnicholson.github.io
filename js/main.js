@@ -23,11 +23,13 @@ function BackToHome() {
 }
 
 window.onload = function(){
-    let firstSection = document.querySelector('section:first-of-type');
-    firstSection.append(ConstructLocalScrollButton());
-
-    let lastSection = document.querySelector('section:last-of-type');
-    lastSection.append(ConstructBackToTopButton());
+    let numSections = document.querySelectorAll('section').length;
+    if(numSections > 1) {
+        let firstSection = document.querySelector('section:first-of-type');
+        firstSection.append(ConstructLocalScrollButton());
+        let lastSection = document.querySelector('section:last-of-type');
+        lastSection.append(ConstructBackToTopButton());
+    }
 
     AOS.init({
         duration:1000,

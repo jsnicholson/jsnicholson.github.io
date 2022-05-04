@@ -89,4 +89,8 @@ a:hover {
 	max-height:90vh;
 }
 
+.underline {
+    text-decoration:underline;
+}
+
 /* ids */

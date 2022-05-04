@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Topography</title>
+        <!-- meta -->
+            <!-- required -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <!-- stylesheets -->
+            <!-- vendor-->
+            <link href="/vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="/vendor/aos/css/aos.css" rel="stylesheet"/>
+            <!-- custom -->
+            <link href="/css/main.css" rel="stylesheet"/>
+            <link href="/css/theme.earth.css" rel="stylesheet"/>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <!-- scripts -->
+            <!-- vendor -->
+            <script src="/vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
+            <script src="/vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
+            <script src="/vendor/aos/js/aos.js"></script>
+            <!-- custom -->
+            <script src="/js/main.js"></script>
+    </head>
+    <body>
+        <nav></nav>
+        <main>
+            <!-- title section -->
+            <section class="height-100 align-items-center p-4 px-md-5 bg-accent-light">
+                <div class="container">
+                    <div class="row">
+                        <h1 data-aos="fade-left">"Topography of Kaifen and its surrounding area"</h1>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Part of the 'Taokodzen' series</h5>
+                    </div>
+                    <img src="/assets/icon/arrow_back.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
+                </div>
+            </section>
+            <!-- description section -->
+            <section class="height-80 align-items-center p-4 px-md-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-end mb-2 mb-md-0">
+                            <h1 data-aos="fade">Description</h1>
+                        </div>
+                        <div class="col-md-6 offset-md-1">
+                            <p>"Atop a hill on the far northern shores of the isles sits the oldest monastic settlement of the Tao. 
+                                Kaifen (literally ‘First Hill’) is an offshoot of the greater north eastern range that juts into the isthmus 
+                                joining the colder north to the rest of the landmass. The monastery at its peak has foundations in the earliest 
+                                arrival of the Tao across the straits and evidence suggests it’s one of the first permanent structures erected 
+                                by these settlers".</p>
+                    
+                                <p>"The Kaifen monastery has had a tumultuous history, being a religious centre, a seat of regional power and a key 
+                                strategic position in many skirmishes and battles as a gateway to the northern peninsula. As such, it has been 
+                                firmly cemented as a cultural icon for the majority of the vast Tao legacy and remains a key site for our research 
+                                into their past."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- full art section-->
+            <section class="height-60 d-flex align-items-center justify-content-center p-4 px-md-5 bg-white">
+                <div class="container">
+                    <img src="/assets/art/topography.png" class="rounded full-art" alt="2 black and white topographic maps side by side. the left appears more zoomed out, showing the edge of a mountain range to the west opening into rolling hills, an ocean to the north, and a lone hill jutting out from the mountains inter the center. the right shows a zoom in on that outlying hill">
+                </div>
+            </section>
+            <!-- materials section -->
+            <section class="height-80 d-flex align-items-center justify-content-center text-center p-4 px-md-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <h1>Materials</h1>
+                    </div>
+                    <div class="row">
+                        <p>Unipin 0.1 Fine Line<br>Derwent 6H Pencil<br>Unbranded A6 Paper</p>
+                    </div>    
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </body>
+    <!-- startup script to load common content -->
+    <script>
+        LoadHtmlInto("/footer.html", "footer");
+    </script>
+</html>

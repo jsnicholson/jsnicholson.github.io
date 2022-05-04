@@ -38,6 +38,10 @@ a:hover {
 }
 
 /* classes */
+.bg-white {
+    background-color:white;
+}
+
 .bg-light {
     background-color:var(--color-light) !important;
 }

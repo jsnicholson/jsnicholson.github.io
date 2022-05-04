@@ -39,11 +39,11 @@ a:hover {
 
 /* classes */
 .bg-light {
-    background-color:var(--color-light);
+    background-color:var(--color-light) !important;
 }
 
 .bg-accent-light {
-    background-color: var(--color-accent-light);
+    background-color: var(--color-accent-light) !important;
 }
 
 .btn:hover {

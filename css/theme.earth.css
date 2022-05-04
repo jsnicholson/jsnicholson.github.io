@@ -44,4 +44,12 @@ footer {
     background-color:var(--color-dark);
     color:var(--color-light);
 }
+
+.text-light {
+    color:var(--color-light);
+}
+
+.text-dark {
+    color:var(--color-dark);
+}
 /* ids */

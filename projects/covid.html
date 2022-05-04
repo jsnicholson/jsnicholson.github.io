@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <!-- meta -->
+            <!-- required -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <!-- stylesheets -->
+            <!-- vendor-->
+            <link href="/vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="/vendor/aos/css/aos.css" rel="stylesheet"/>
+            <!-- custom -->
+            <link href="/css/main.css" rel="stylesheet"/>
+            <link href="/css/theme.earth.css" rel="stylesheet"/>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <!-- scripts -->
+            <!-- vendor -->
+            <script src="/vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
+            <script src="/vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
+            <script src="/vendor/aos/js/aos.js"></script>
+            <!-- custom -->
+            <script src="/js/main.js"></script>
+    </head>
+    <body>
+        <nav></nav>
+        <main>
+            <!-- title section -->
+            <section class="height-100 align-items-center p-4 px-md-5 bg-accent-light">
+                <div class="container">
+                    <div class="row">
+                        <h1 data-aos="fade-left">Covid Passport</h1>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">NHS Scotland</h5>
+                    </div>
+                    <img src="/assets/icon/arrow_back.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
+                </div>
+            </section>
+            <!-- description section -->
+            <section class="height-80 align-items-center p-4 px-md-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-end mb-2 mb-md-0">
+                            <h1 data-aos="fade">Description</h1>
+                        </div>
+                        <div class="col-md-6 offset-md-1">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <p data-aos="fade" data-aos-delay="50"><b>NHS Scotland</b> requested a <b>digital passport</b> solution for COVID-19 vaccinations during the global pandemic starting 2019<br><br><b>Netcompany</b> was tasked with its creation and I was lucky enough to be a part of it, joining shortly before the first release<br><br>On joining, I was dealing with a sizeable list of <b>bugs</b>, mostly UI and accessibility related. As I cleared through the list I wanted to help out more with the <b>broader</b> scope of the project</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p data-aos="fade" data-aos-delay="100">More responsibility was granted to me, first with managing incoming defects and keeping our boards tidy, resulting in a team leading role</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- media section -->
+            <section class="height-80 d-flex align-items-center justify-content-center text-center p-4 px-md-5 bg-accent-light">
+                <div class="container">
+                </div>
+            </section>
+            <!-- post-analysis section-->
+            <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5 bg-light">
+                <div class="container">
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </body>
+    <!-- startup script to load common content -->
+    <script>
+        LoadHtmlInto("/footer.html", "footer");
+    </script>
+</html>

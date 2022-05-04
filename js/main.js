@@ -31,6 +31,11 @@ window.onload = function(){
         lastSection.append(ConstructBackToTopButton());
     }
 
+    let loader = document.querySelector('aside');
+    let main = document.querySelector('main');
+    if(loader)loader.classList.add("d-none");
+    main.classList.remove("d-none");
+
     AOS.init({
         duration:1000,
         once:true,

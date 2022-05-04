@@ -36,7 +36,16 @@ a {
 a:hover {
     color:var(--color-dark);
 }
+
 /* classes */
+.bg-light {
+    background-color:var(--color-light);
+}
+
+.bg-accent-light {
+    background-color: var(--color-accent-light);
+}
+
 .btn:hover {
     background-color: var(--color-accent-dark);
     color:var(--color-light);

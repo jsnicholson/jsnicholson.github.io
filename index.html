@@ -15,7 +15,9 @@
             <link href="css/theme.earth.css" rel="stylesheet"/>
 
         <!-- fonts -->
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
         <!-- scripts -->
             <!-- vendor -->
             <script src="vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
@@ -32,12 +34,12 @@
                 <div class="container">
                     <div class="row">
                         <h1 data-aos="fade-left">Joshua Nicholson</h1>
-                        <h5 data-aos="fade-left" data-aos-delay="50">Software Consultant</h5>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Software Consultant</h5>
                     </div>
                 </div>
             </section>
             <!-- about me section -->
-            <section class="height-80 align-items-center p-4 px-md-5" id="aboutme">
+            <section class="height-80 align-items-center p-4 px-md-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 text-end mb-2 mb-md-0">
@@ -66,7 +68,7 @@
                     </div>
                     <div class="row" data-aos="fade" data-aos-delay="50">
                         <div class="col">
-                            <p>If you'd like to see what skills and experience I have, a pretty, and a condensed pdf version of my CV are available. </p>
+                            <p>If you'd like to see what <b>skills</b> and <b>experience</b> I have, a pretty, and a condensed pdf version of my CV are available. </p>
                         </div>
                     </div>
                     <div class="row" data-aos="fade" data-aos-delay="50">
@@ -79,9 +81,39 @@
             <!-- portfolio section-->
             <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5">
                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h1 data-aos="fade">Portfolio</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 order-md-5 text-md-start text-end mb-4">
+                            <h1 data-aos="fade">Projects</h1>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="row justify-content-md-center" data-aos="fade">
+                                <div class="col">
+                                    <b>NHS Scotland Covid Passport</b>
+                                    <hr style="margin-top:16px;">
+                                </div>
+                                <div class="col">c#, xamarin, azure, devops</div>
+                            </div>
+                            <div class="row justify-content-md-center" data-aos="fade">
+                                <div class="col">
+                                    <b>Notion Random Thought Integration</b>
+                                    <hr style="margin-top:16px;">
+                                </div>
+                                <div class="col">node.js, serverless function, REST</div>
+                            </div>
+                            <div class="row justify-content-md-center" data-aos="fade">
+                                <div class="col">
+                                    <b>Voxel Meshing</b>
+                                </div>
+                                <div class="col">c++, opengl, sdl, glew, glm</div>
+                            </div>
+                            <div class="row justify-content-center mt-3 mt-md-5" data-aos="fade">
+                                <div class="col-auto d-flex align-items-center">
+                                    <p class="mb-2">These are just some cherry-picked examples. For a more complete list click below</p>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="projects/" class="btn btn-outline" style="padding:10px 20px;font-size:1em;"><b>View All Projects</b></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

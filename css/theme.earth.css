@@ -6,7 +6,7 @@
     --color-light:#e3e1da;
     --color-accent-light:#c1b8ab;
     --color-brand:#9e8d7b;
-    --color-accent-dark:#444;
+    --color-accent-dark:#423f3c;
     --color-dark:#53493d;
 }
 
@@ -28,6 +28,14 @@ footer {
     background-color: var(--color-accent-dark);
     color: var(--color-light);
 }
+
+a {
+    color:var(--color-dark);
+}
+
+a:hover {
+    color:var(--color-dark);
+}
 /* classes */
 .btn:hover {
     background-color: var(--color-accent-dark);
@@ -43,5 +51,17 @@ footer {
 .btn-outline:active {
     background-color:var(--color-dark);
     color:var(--color-light);
+}
+
+.text-light {
+    color:var(--color-light);
+}
+
+.text-dark {
+    color:var(--color-dark);
+}
+
+.active {
+    font-weight:bold;
 }
 /* ids */

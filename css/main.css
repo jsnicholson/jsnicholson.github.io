@@ -27,6 +27,8 @@ footer {
 
 h1 {
     font-size:3em;
+    font-family: 'Playfair Display', serif;
+    font-weight:700;
 }
 
 /* classes */
@@ -53,5 +55,21 @@ h1 {
     position:absolute;
     left:1em;
     top:1em;
+}
+
+.subheading {
+    font-family: 'Playfair Display', serif;
+    font-weight:400;
+}
+
+.filters a {
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.filters a:active {
+    text-decoration:none;
 }
 /* ids */

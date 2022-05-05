@@ -10,6 +10,7 @@
             <!-- vendor-->
             <link href="/vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
             <link href="/vendor/aos/css/aos.css" rel="stylesheet"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
             <!-- custom -->
             <link href="/css/main.css" rel="stylesheet"/>
             <link href="/css/theme.earth.css" rel="stylesheet"/>
@@ -43,10 +44,10 @@
             <!-- education section -->
             <section class="height-80 d-flex justify-content-center p-4 px-md-5">
                 <div class="container">
-                    <div class="row mt-3 mb-4 justify-content-center">
+                    <div class="row mt-3 mb-4 justify-content-center" data-aos="fade">
                         <div class="col align-items-end">
                             <div id="filters" class="filters justify-content-center text-center">
-                                <a onclick="FilterClicked(this)" data-filter=".row" class="active">All</a>
+                                <a onclick="FilterClicked(this)" data-filter="a" class="active">All</a>
                                 <a onclick="FilterClicked(this)" data-filter=".highlighted">Highlighted</a>
                                 <a onclick="FilterClicked(this)" data-filter=".industry">Industry</a>
                                 <a onclick="FilterClicked(this)" data-filter=".code">Code</a>
@@ -56,72 +57,72 @@
                     </div>
                     <div class="row">
                         <div class="col" id="portfolio-list">
-                            <a href="/projects/covid"><div class="row industry highlighted">
+                            <a href="/projects/covid" class="industry highlighted animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>NHS Scotland Covid Passport</b></div>
                                 <div class="col-6">c#, xamarin, azure, devops</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/notion"><div class="row code highlighted">
+                            <a href="/projects/notion" class="code highlighted animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Notion Random Thought Integration</b></div>
                                 <div class="col-6">node.js, serverless function, REST</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/voxel"><div class="row code highlighted" data-aos="fade">
+                            <a href="/projects/voxel" class="code highlighted animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Voxel Meshing</b></div>
                                 <div class="col-6">c++, opengl, sdl, glew, glm</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/plane"><div class="row code" data-aos="fade">
+                            <a href="/projects/plane" class="code animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Rooty Tooty Pilot Shooty</b></div>
                                 <div class="col-6">c++, proprietary framework</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/activity"><div class="row code" data-aos="fade">
+                            <a href="/projects/activity" class="code animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Activity Tracker</b></div>
                                 <div class="col-6">java, android</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/imgurviewer"><div class="row code" data-aos="fade">
+                            <a href="/projects/imgurviewer" class="code animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Imgurviewer</b></div>
                                 <div class="col-6">bootstrap, javascript, REST</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/portfolio"><div class="row code" data-aos="fade">
+                            <a href="/projects/portfolio" class="code animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Portfolio</b></div>
                                 <div class="col-6">bootstrap, javascript</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/coh"><div class="row industry" data-aos="fade">
+                            <a href="/projects/coh" class="industry animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>Company of Heroes Mobile</b></div>
                                 <div class="col-6">c++, xcode, jira</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/xcom2"><div class="row industry" data-aos="fade">
+                            <a href="/projects/xcom2" class="industry animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>XCOM2 Mobile</b></div>
                                 <div class="col-6">c++, unreal, visual studio. jira</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/giants"><div class="row art" data-aos="fade">
+                            <a href="/projects/giants" class="art animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>"Walking amongst Giants"</b></div>
                                 <div class="col-6">watercolour, ink</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/ginjen"><div class="row art" data-aos="fade">
+                            <a href="/projects/ginjen" class="art animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>"Ginjen Bend"</b></div>
                                 <div class="col-6">watercolour, gouache</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/peaks"><div class="row art" data-aos="fade">
+                            <a href="/projects/peaks" class="art animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>"Atop the Misty Peaks"</b></div>
                                 <div class="col-6">watercolour, gouache, fine-line</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/portrait"><div class="row art" data-aos="fade">
+                            <a href="/projects/portrait" class="art animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>"Restored Portrait of a Tao Historian"</b></div>
                                 <div class="col-6">watercolour, ink, gouache</div>
                                 <hr style="margin-top:16px;">
                             </div></a>
-                            <a href="/projects/topography"><div class="row art" data-aos="fade">
+                            <a href="/projects/topography" class="art animate__fadeIn" data-aos="fade"><div class="row">
                                 <div class="col-6 col-md-4 offset-md-2"><b>"Topography of Kaifen and its surrounding area"</b></div>
                                 <div class="col-6">pencil, fine-line</div>
                                 <hr style="margin-top:16px;">

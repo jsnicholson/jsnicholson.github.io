@@ -23,6 +23,7 @@ function BackToHome() {
 }
 
 window.onload = function(){
+    // add down arrow to first section and up arrow to last section
     let numSections = document.querySelectorAll('section').length;
     if(numSections > 1) {
         let firstSection = document.querySelector('section:first-of-type');
@@ -31,6 +32,18 @@ window.onload = function(){
         lastSection.append(ConstructBackToTopButton());
     }
 
+    // remove animate.css class after animation end
+    let projectList = document.querySelector('#portfolio-list');
+    if(projectList) {
+        let list = projectList.querySelectorAll('a');
+        list.forEach(item => {
+            item.addEventListener('animationend', () => {
+                item.classList.remove("animate__animated");
+            });
+        });
+    }
+
+    // hide loading screen after window fully loaded
     let loader = document.querySelector('aside');
     let main = document.querySelector('main');
     if(loader)loader.classList.add("d-none");
@@ -67,7 +80,7 @@ function ConstructLocalScrollButton() {
 function FilterClicked(filter) {
     // remove active from all filters
     let filters = document.querySelectorAll(".filters a");
-    filters.forEach((item) => {
+    filters.forEach(item => {
         item.classList.remove("active");
     });
     // add active only to the one we clicked
@@ -75,13 +88,22 @@ function FilterClicked(filter) {
     let filterType = filter.getAttribute("data-filter");
     let list = document.getElementById("portfolio-list");
     // hide all rows
-    const allRows = list.querySelectorAll(".row");
-    allRows.forEach((item) => {
+    const allRows = list.querySelectorAll("a");
+    allRows.forEach(item => {
         item.classList.add("d-none");
+        item.classList.remove("animate__animated");
     });
     // show wanted rows
     const wantedRows = list.querySelectorAll(filterType);
-    wantedRows.forEach((item) => {
-        item.classList.remove("d-none");
+    let num = 0;
+    wantedRows.forEach(item => {
+        item.removeAttribute("data-aos");
+        item.style = "--animate-delay:"+(0.2*num)+"s";
+        // add animate class after timeout to ensure its picked up
+        setTimeout(function(){
+            item.classList.remove("d-none"); 
+            item.classList.add("animate__animated");
+        }, 10);
+        num++;
     });
 }

@@ -144,7 +144,7 @@ const PROJECTS_LIST = [
         "title":"Notion Random Thought Integration",
         "technologies":"node.js, serverless function, REST",
         "url":"/projects/notion",
-        "tags":"code hightlighted"
+        "tags":"code highlighted"
     },
     {
         "title":"Voxel Meshing",

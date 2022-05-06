@@ -33,7 +33,7 @@ window.onload = function(){
     }
 
     // remove animate.css class after animation end
-    let projectList = document.querySelector('#portfolio-list');
+    let projectList = document.querySelector('#project-list');
     if(projectList) {
         let list = projectList.querySelectorAll('a');
         list.forEach(item => {
@@ -77,6 +77,31 @@ function ConstructLocalScrollButton() {
     return container;
 }
 
+async function ConstructProjectItems() {
+    const container = document.getElementById("project-list");
+    const template = await GetProjectItemTemplate();
+
+    for(const project of PROJECTS_LIST) {
+        const projectItem = ConstructProjectItem(project, template);
+        container.innerHTML+=projectItem;
+    }
+}
+
+async function GetProjectItemTemplate() {
+    let response = await fetch("/projects/project-item.html");
+    let data = response.text();
+    return data;
+}
+
+function ConstructProjectItem(data, template) {
+    let copy = template;
+    copy = copy.replace("{{title}}",data.title);
+    copy = copy.replace("{{technologies}}",data.technologies);
+    copy = copy.replace("{{url}}",data.url);
+    copy = copy.replace("{{tags}}",data.tags);
+    return copy;
+}
+
 function FilterClicked(filter) {
     // remove active from all filters
     let filters = document.querySelectorAll(".filters a");
@@ -86,7 +111,7 @@ function FilterClicked(filter) {
     // add active only to the one we clicked
     filter.classList.add("active");
     let filterType = filter.getAttribute("data-filter");
-    let list = document.getElementById("portfolio-list");
+    let list = document.getElementById("project-list");
     // hide all rows
     const allRows = list.querySelectorAll("a");
     allRows.forEach(item => {
@@ -107,3 +132,90 @@ function FilterClicked(filter) {
         num++;
     });
 }
+
+const PROJECTS_LIST = [
+    {
+        "title":"NHS Scotland Covid Passport",
+        "technologies":"c#, xamarin, azure, devops",
+        "url":"/project/covid",
+        "tags":"industry code highlighted"
+    },
+    {
+        "title":"Notion Random Thought Integration",
+        "technologies":"node.js, serverless function, REST",
+        "url":"/projects/notion",
+        "tags":"code hightlighted"
+    },
+    {
+        "title":"Voxel Meshing",
+        "technologies":"c++, opengl, sdl, glew, glm",
+        "url":"/projects/voxel",
+        "tags":"code highlighted"
+    },
+    {
+        "title":"Rooty Tooty Pilot Shooty",
+        "technologies":"c++, proprietary framework",
+        "url":"/projects/plane",
+        "tags":"code"
+    },
+    {
+        "title":"Activity Tracker",
+        "technologies":"java, android, xml",
+        "url":"/projects/activity",
+        "tags":"code"
+    },
+    {
+        "title":"Imgurviewer",
+        "technologies":"bootstrap, javascript, REST",
+        "url":"/projects/imgur",
+        "tags":"code"
+    },
+    {
+        "title":"Personal Website",
+        "technologies":"bootstrap, javascript",
+        "url":"/projects/website",
+        "tags":"code"
+    },
+    {
+        "title":"Company of Heroes Mobile",
+        "technologies":"c++ xcode, jira",
+        "url":"/projects/coh",
+        "tags":"industry code"
+    },
+    {
+        "title":"XCOM2 Mobile",
+        "technologies":"c++, unreal, visual studio, jira",
+        "url":"/projects/xcom",
+        "tags":"industry code"
+    },
+    {
+        "title":"'Walking amongst Giants'",
+        "technologies":"watercolour, ink",
+        "url":"/projects/giants",
+        "tags":"art"
+    },
+    {
+        "title":"'Ginjen Bend'",
+        "technologies":"watercolour, gouache",
+        "url":"/projects/ginjen",
+        "tags":"art"
+    },
+    {
+        "title":"'Atop the Misty Peaks'",
+        "technologies":"watercolour, gouache, fine-line",
+        "url":"/projects/peaks",
+        "tags":"art"
+    },
+    {
+        "title":"'Restored Portrait of a Tao Historian'",
+        "technologies":"watercolour, ink, gouache",
+        "url":"/projects/portrait",
+        "tags":"art"
+    },
+    {
+        "title":"'Topography of Kaifen and it's surroudning area'",
+        "technologies":"pencil, fine-line",
+        "url":"/projects/topography",
+        "tags":"art"
+    },
+];

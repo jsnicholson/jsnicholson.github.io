@@ -77,4 +77,10 @@ a:hover {
 .active {
     font-weight:bold;
 }
+
+.project-item-content:hover {
+    color:var(--color-light);
+    background-color:var(--color-dark);
+}
+
 /* ids */

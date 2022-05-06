@@ -137,7 +137,7 @@ const PROJECTS_LIST = [
     {
         "title":"NHS Scotland Covid Passport",
         "technologies":"c#, xamarin, azure, devops",
-        "url":"/project/covid",
+        "url":"/projects/covid",
         "tags":"industry code highlighted"
     },
     {

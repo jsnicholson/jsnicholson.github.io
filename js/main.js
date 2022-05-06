@@ -213,7 +213,7 @@ const PROJECTS_LIST = [
         "tags":"art"
     },
     {
-        "title":"'Topography of Kaifen and it's surroudning area'",
+        "title":"'Topography of Kaifen and it's surrounding area'",
         "technologies":"pencil, fine-line",
         "url":"/projects/topography",
         "tags":"art"

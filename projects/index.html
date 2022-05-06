@@ -80,78 +80,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col" id="portfolio-list">
-                            <a href="/projects/covid" class="industry highlighted animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>NHS Scotland Covid Passport</b></div>
-                                <div class="col-6">c#, xamarin, azure, devops</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/notion" class="code highlighted animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Notion Random Thought Integration</b></div>
-                                <div class="col-6">node.js, serverless function, REST</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/voxel" class="code highlighted animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Voxel Meshing</b></div>
-                                <div class="col-6">c++, opengl, sdl, glew, glm</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/plane" class="code animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Rooty Tooty Pilot Shooty</b></div>
-                                <div class="col-6">c++, proprietary framework</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/activity" class="code animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Activity Tracker</b></div>
-                                <div class="col-6">java, android</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/imgurviewer" class="code animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Imgurviewer</b></div>
-                                <div class="col-6">bootstrap, javascript, REST</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/portfolio" class="code animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Portfolio</b></div>
-                                <div class="col-6">bootstrap, javascript</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/coh" class="industry animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>Company of Heroes Mobile</b></div>
-                                <div class="col-6">c++, xcode, jira</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/xcom2" class="industry animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>XCOM2 Mobile</b></div>
-                                <div class="col-6">c++, unreal, visual studio. jira</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/giants" class="art animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>"Walking amongst Giants"</b></div>
-                                <div class="col-6">watercolour, ink</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/ginjen" class="art animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>"Ginjen Bend"</b></div>
-                                <div class="col-6">watercolour, gouache</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/peaks" class="art animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>"Atop the Misty Peaks"</b></div>
-                                <div class="col-6">watercolour, gouache, fine-line</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/portrait" class="art animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>"Restored Portrait of a Tao Historian"</b></div>
-                                <div class="col-6">watercolour, ink, gouache</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/topography" class="art animate__fadeIn" data-aos="fade"><div class="row">
-                                <div class="col-6 col-md-4 offset-md-2"><b>"Topography of Kaifen and its surrounding area"</b></div>
-                                <div class="col-6">pencil, fine-line</div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8" id="project-list">
                         </div>
                     </div>
                 </div>
@@ -162,5 +92,6 @@
     <!-- startup script to load common content -->
     <script>
         LoadHtmlInto("/footer.html", "footer");
+        ConstructProjectItems();
     </script>
 </html>

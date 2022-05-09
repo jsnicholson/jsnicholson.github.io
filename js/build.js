@@ -1,9 +1,9 @@
-export { ConstructBackToTopButton, ConstructLocalScrollButton, ConstructProjectItems, ConstructHomeButton };
+export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildHomeButton };
 
 import { ScrollToSecondSection, ScrollToTop, BackToHome } from "/js/utils.js";
 import { PROJECTS_LIST } from "/js/constants.js";
 
-function ConstructBackToTopButton() {
+function BuildBackToTopButton() {
     let element = document.createElement("img");
     element.setAttribute("src","/assets/icon/chevron_up.svg");
     element.setAttribute("class","local-scroll");
@@ -11,7 +11,7 @@ function ConstructBackToTopButton() {
     return element;
 }
 
-function ConstructLocalScrollButton() {
+function BuildLocalScrollButton() {
     let container = document.createElement("div");
     container.setAttribute("class","local-scroll");
 
@@ -25,14 +25,14 @@ function ConstructLocalScrollButton() {
     return container;
 }
 
-async function ConstructProjectItems() {
+async function BuildProjectItems() {
     const container = document.getElementById("project-list");
     if(!container)
         return;
     const template = await GetProjectItemTemplate();
 
     for(const project of PROJECTS_LIST) {
-        const projectItem = ConstructProjectItem(project, template);
+        const projectItem = BuildProjectItem(project, template);
         container.innerHTML+=projectItem;
     }
 }
@@ -43,7 +43,7 @@ async function GetProjectItemTemplate() {
     return data;
 }
 
-function ConstructProjectItem(data, template) {
+function BuildProjectItem(data, template) {
     let copy = template;
     copy = copy.replace("{{title}}",data.title);
     copy = copy.replace("{{technologies}}",data.technologies);
@@ -52,7 +52,7 @@ function ConstructProjectItem(data, template) {
     return copy;
 }
 
-function ConstructHomeButton() {
+function BuildHomeButton() {
     let btn = document.createElement("img");
     btn.setAttribute("src","/assets/icon/home.svg");
     btn.setAttribute("data-aos","fade-left");

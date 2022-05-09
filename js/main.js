@@ -155,7 +155,7 @@ const PROJECTS_LIST = [
     {
         "title":"Rooty Tooty Pilot Shooty",
         "technologies":"c++, proprietary framework",
-        "url":"/projects/plane",
+        "url":"/projects/pilot",
         "tags":"code"
     },
     {

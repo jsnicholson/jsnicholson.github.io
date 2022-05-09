@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Covid</title>
+        <title>Notion</title>
         <!-- meta -->
             <!-- required -->
             <meta charset="utf-8">
@@ -58,8 +58,8 @@
             <section class="height-100 align-items-center p-4 px-md-5 bg-accent-light">
                 <div class="container">
                     <div class="row">
-                        <h1 data-aos="fade-left">Covid Passport</h1>
-                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">NHS Scotland</h5>
+                        <h1 data-aos="fade-left">Notion Random Thought</h1>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">An integration for the Notion note-taking app</h5>
                     </div>
                     <img src="/assets/icon/home.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
                 </div>
@@ -67,17 +67,20 @@
             <!-- description section -->
             <section class="height-80 align-items-center p-4 px-md-5 bg-light">
                 <div class="container">
-                    <div class="row">
+                    <div class="row mb-2 mb-md-0">
                         <div class="col-md-4 text-end mb-2 mb-md-0">
                             <h1 data-aos="fade">Description</h1>
                         </div>
                         <div class="col-md-6 offset-md-1">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                    <p data-aos="fade" data-aos-delay="50"><b>NHS Scotland</b> requested a <b>digital passport</b> solution for COVID-19 vaccinations during the global pandemic starting 2019<br><br><b>Netcompany</b> was tasked with its creation and I was lucky enough to be a part of it, joining shortly before the first release<br><br>On joining, I was dealing with a sizeable list of <b>bugs</b>, mostly UI and accessibility related. As I cleared through the list I wanted to help out more with the <b>broader</b> scope of the project</p>
+                                    <p data-aos="fade" data-aos-delay="50">Notion has been my <b>note-taking app of choice</b> for some time now. In particular I find it's <b>simple database</b> functionality extremely useful. However I can be quite a <b>forgetful</b> person so I wanted a system by which I could <b>randomly resurface ideas</b><br><br>My major issue here was that a view into a Notion database can <b>only</b> pull data from a <b>single source</b> but my ideas (or other data) may be spread across <b>many</b> databases with <b>different schemas</b>. Perhaps outside an existing application, a NoSQL database solution would be appropriate but I wanted to continue using Notion</p>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <p data-aos="fade" data-aos-delay="100"><b>More responsibility</b> was granted to me, first with managing incoming defects and keeping our boards tidy, resulting in a <b>scrum master role</b><br><br>This involved leading a <b>full-stack team of 5 people</b>, <b>organising work</b> each sprint, <b>requirement gathering</b>, aiding with <b>testing</b>, <b>delivering</b> product on-time, and whenever possible mucking in on the <b>development</b></p>
+                                    <p data-aos="fade" data-aos-delay="100">Enter Pipedream, a <b>serverless function</b> service similar to Zapier and Automate.io. It's generous free plan drew me in, as well as it's option for adding arbitrary <b>Node.js</b> code<br><br>Via <b>Notion's API</b> I could now pull data from many sources, choose some entries at random, create some simple reference items, and push them to a new database</p>
+                                    <br><br>
+                                    <p><b>Source code available at the link below</b></p>
+                                    <div class="text-center"><a href="https://github.com/jsnicholson/notionrandomthought" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:1em;"><b>Github</b></a></div>
                                 </div>
                             </div>
                         </div>
@@ -92,10 +95,10 @@
                             <h1 data-aos="fade-left">Post-analysis</h1>
                         </div>
                         <div class="col-md-4" data-aos="fade" data-aos-delay="50">
-                            <p>This project provided a huge amount of experience, especially as my first position as scrum master. I very quickly gained appreciation for the full scope of a business project<br><br>I built great rapport with the client via regular meetings to plan work, plan sprints, and gather requirements<br><br>I learnt a great deal about team dynamics also in managing employee expectations, ensuring everyone was given enough time and notice for upcoming work, and fostering a strong communication</p>
+                            <p>This project was a great <b>success</b> and has achieved the goal it was originally intended for. It has provided some <b>fantastic learning</b> that isn't tied to a single platform (Pipedream) but to any serverless function service (such as AWS Lambda). Additional experience interacting with REST api is always useful also<br><br>Whilst the goal has been achieved there is always <b>room for improvement</b>. <b>Testing</b> is minimal, <b>error handling</b> has some blindspots, perhaps this would be better replicated on a larger platform like AWS</p>
                         </div>
                         <div class="col-md-4" data-aos="fade" data-aos-delay="100">
-                            <p>Not everything was smooth, there were certainly bumps in the road as I got a grasp on how it all worked. If possible I want to better improve my handling of sprint activities, making sure that retros and planning are taken of advantage of fully, rather than them becoming an empty ritual at times</p>
+                            <p>Ultimately I think it would be good to release this as a <b>public product</b> but it requites a lot more tooling. As it currently stands the code can be shared and others can set this system up for themselves in their own Notion workspace but it isn't exactly user-friendly, especially to non-developers<br><br>This would take the form of the same Node.js running on AWS Lambda, AWS Cognito so that users can configure their integration, a simple web page to log in and configure, and a lot more testing. Maybe I'll get round to this in the future</p>
                         </div>
                     </div>
                 </div>

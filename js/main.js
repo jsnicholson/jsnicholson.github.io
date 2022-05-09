@@ -144,7 +144,7 @@ const PROJECTS_LIST = [
         "title":"Notion Random Thought Integration",
         "technologies":"node.js, serverless function, REST",
         "url":"/projects/notion",
-        "tags":"code hightlighted"
+        "tags":"code highlighted"
     },
     {
         "title":"Voxel Meshing",
@@ -155,7 +155,7 @@ const PROJECTS_LIST = [
     {
         "title":"Rooty Tooty Pilot Shooty",
         "technologies":"c++, proprietary framework",
-        "url":"/projects/plane",
+        "url":"/projects/pilot",
         "tags":"code"
     },
     {
@@ -213,7 +213,7 @@ const PROJECTS_LIST = [
         "tags":"art"
     },
     {
-        "title":"'Topography of Kaifen and it's surroudning area'",
+        "title":"'Topography of Kaifen and it's surrounding area'",
         "technologies":"pencil, fine-line",
         "url":"/projects/topography",
         "tags":"art"

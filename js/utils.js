@@ -1,10 +1,12 @@
 export { LoadHtmlInto, ScrollTo, ScrollToSecondSection, ScrollToTop, BackToHome, FilterClicked, GetBaseUrl };
 
 function LoadHtmlInto(filename, id) {
-    console.log("load " + filename + " into " + id);
     fetch(filename)
     .then(response => response.text())
-    .then(text => document.getElementById(id).innerHTML = text);
+    .then(text => document.getElementById(id).innerHTML = text)
+    .catch((error) => {
+        console.log("load html failed:",error);
+    });
 }
 
 function ScrollTo(id){

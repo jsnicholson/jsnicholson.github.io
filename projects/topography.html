@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="/js/main.js" type="module"></script>
         <title>Topography</title>
         <!-- meta -->
             <!-- required -->
@@ -44,7 +45,6 @@
             <script src="/vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
             <script src="/vendor/aos/js/aos.js"></script>
             <!-- custom -->
-            <script src="/js/main.js"></script>
     </head>
     <body>
         <nav></nav>
@@ -61,7 +61,6 @@
                         <h1 data-aos="fade-left">"Topography of Kaifen and its surrounding area"</h1>
                         <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Part of the 'Taokodzen' series</h5>
                     </div>
-                    <img src="/assets/icon/home.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
                 </div>
             </section>
             <!-- description section -->
@@ -106,8 +105,4 @@
         </main>
         <footer id="footer"></footer>
     </body>
-    <!-- startup script to load common content -->
-    <script>
-        LoadHtmlInto("/footer.html", "footer");
-    </script>
 </html>

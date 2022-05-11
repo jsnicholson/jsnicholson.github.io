@@ -44,7 +44,7 @@
             <script src="vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
             <script src="vendor/aos/js/aos.js"></script>
             <!-- custom -->
-            <script src="js/main.js"></script>
+            <script src="js/main.js" type="module"></script>
     </head>
     <body>
         <nav></nav>
@@ -61,7 +61,7 @@
                         <h1 data-aos="fade-left">Curriculum Vitae</h1>
                         <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Education, Experience, and Skills</h5>
                     </div>
-                    <img src="assets/icon/home.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
+                    <img src="assets/icon/home.svg" id="home-btn" class="btn-back" data-aos="fade-left" data-aos-delay="100"/>
                 </div>
             </section>
             <!-- education section -->
@@ -133,8 +133,4 @@
         </main>
         <footer id="footer"></footer>
     </body>
-    <!-- startup script to load common content -->
-    <script>
-        LoadHtmlInto("/footer.html", "footer");
-    </script>
 </html>

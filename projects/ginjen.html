@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="/js/main.js" type="module"></script>
         <title>Ginjen</title>
         <!-- meta -->
             <!-- required -->
@@ -43,11 +44,8 @@
             <script src="/vendor/bootstrap-5.1.3/js/bootstrap.min.js"></script>
             <script src="/vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
             <script src="/vendor/aos/js/aos.js"></script>
-            <!-- custom -->
-            <script src="/js/main.js"></script>
     </head>
     <body>
-        <nav></nav>
         <aside class="loader align-items-center justify-content-center">
             <div class="center">
                 <div class="spinner-grow" role="status"></div>
@@ -61,7 +59,6 @@
                         <h1 data-aos="fade-left">"Ginjen Bend"</h1>
                         <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Part of the 'Taokodzen' series</h5>
                     </div>
-                    <img src="/assets/icon/home.svg" class="btn-back" onclick="BackToHome()" data-aos="fade-left" data-aos-delay="100"/>
                 </div>
             </section>
             <!-- description section -->
@@ -76,7 +73,7 @@
                                 we are uncertain of how it was obtained or its origins. Its recovery and safekeeping following the burning of 
                                 the State Palace suggest it was of importance to an official of the pre-common era government."</p>
                                 
-                                <p><a href="https://i.redd.it/ki7ursfa8v111.jpg" class="underline">Original photograph</a> taken by <a href="https://www.reddit.com/r/EarthPorn/comments/8ocfeh/lake_crescent_olympic_national_park_just_after/" class="underline">u/FreeTuckerCase</a></p>
+                                <p><a href="/assets/art/ginjen_original.jpg" class="underline">Original photograph</a> taken by <a href="https://www.reddit.com/r/EarthPorn/comments/8ocfeh/lake_crescent_olympic_national_park_just_after/" class="underline">u/FreeTuckerCase</a></p>
                         </div>
                     </div>
                 </div>
@@ -101,8 +98,4 @@
         </main>
         <footer id="footer"></footer>
     </body>
-    <!-- startup script to load common content -->
-    <script>
-        LoadHtmlInto("/footer.html", "footer");
-    </script>
 </html>

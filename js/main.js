@@ -4,11 +4,6 @@ import * as build from "/js/build.js";
 import * as compose from "/js/compose.js";
 
 window.onload = function(){
-    AOS.init({
-        duration:1000,
-        once:true,
-    });
-
     compose.ComposeSecondSectionScrollButton();
     compose.ComposeBackToTopButton();
     compose.ComposeHomeButton();
@@ -16,6 +11,12 @@ window.onload = function(){
     utils.LoadHtmlInto("/footer.html", "footer");
 
     HideLoadingScreen();
+
+    // this has to be the last thing happening to the body otherwise it doesnt load correctly
+    AOS.init({
+        duration:1000,
+        once:true,
+    });
 }
 
 window.SetupProjectPage = function() {

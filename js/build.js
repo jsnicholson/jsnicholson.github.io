@@ -31,10 +31,12 @@ async function BuildProjectItems() {
         return;
     const template = await GetProjectItemTemplate();
 
+    let items = [];
     for(const project of PROJECTS_LIST) {
-        const projectItem = BuildProjectItem(project, template);
-        container.innerHTML+=projectItem;
+        items.push(BuildProjectItem(project, template));
     }
+    
+    return items;
 }
 
 async function GetProjectItemTemplate() {

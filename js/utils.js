@@ -9,7 +9,7 @@ export { LoadHtmlInto,
     EnableScroll,
     DisableScroll };
 
-import { BuildProjectItems } from "/js/build.js"
+import { ComposeProjectItems } from "/js/compose.js"
 
 function LoadHtmlInto(filename, id) {
     fetch(filename)
@@ -38,7 +38,6 @@ function BackToHome() {
 }
 
 function FilterClicked(filter) {
-    console.log("filter clicked");
     // remove active from all filters
     let filters = document.querySelectorAll(".filters a");
     filters.forEach(item => {
@@ -75,9 +74,9 @@ function HideLoadingScreen() {
 }
 
 function SetupProjectPage() {
-    BuildProjectItems();
+    ComposeProjectItems();
     document.querySelectorAll(".filters a")?.forEach(item => {
-        item.addEventListener("click",function(){utils.FilterClicked(item)});
+        item.addEventListener("click",function(){FilterClicked(item)});
     });
 }
 

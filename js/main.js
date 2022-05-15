@@ -3,6 +3,8 @@ import * as constants from "/js/constants.js";
 import * as build from "/js/build.js";
 import * as compose from "/js/compose.js";
 
+utils.DisableScroll();
+
 window.onload = function(){
     compose.ComposeSecondSectionScrollButton();
     compose.ComposeBackToTopButton();
@@ -11,6 +13,8 @@ window.onload = function(){
     utils.LoadHtmlInto("/footer.html", "footer");
 
     utils.HideLoadingScreen();
+
+    utils.EnableScroll();
 
     // this has to be the last thing happening to the body otherwise it doesnt load correctly
     AOS.init({

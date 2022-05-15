@@ -80,4 +80,13 @@ function SetupProjectPage() {
         item.addEventListener("click",function(){utils.FilterClicked(item)});
     });
 }
+
+function EnableScroll() {
+    document.body.classList.remove("remove-scrolling");
+}
+
+function DisableScroll() {
+    let body = document.body;
+    if(body)
+        document.body.classList.add("remove-scrolling");
 }

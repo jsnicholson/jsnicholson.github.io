@@ -123,4 +123,9 @@ a:hover {
     max-height:80vh;
     max-width:100%;
 }
+
+.remove-scrolling {
+    height:100%;
+    overflow:hidden;
+}
 /* ids */

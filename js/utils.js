@@ -1,4 +1,15 @@
-export { LoadHtmlInto, ScrollTo, ScrollToSecondSection, ScrollToTop, BackToHome, FilterClicked, GetBaseUrl };
+export { LoadHtmlInto,
+    ScrollTo,
+    ScrollToSecondSection,
+    ScrollToTop,
+    BackToHome,
+    FilterClicked,
+    HideLoadingScreen,
+    SetupProjectPage,
+    EnableScroll,
+    DisableScroll };
+
+import { BuildProjectItems } from "/js/build.js"
 
 function LoadHtmlInto(filename, id) {
     fetch(filename)
@@ -58,11 +69,15 @@ function FilterClicked(filter) {
     });
 }
 
-function GetBaseUrl() {
-    let path = window.location.origin;
-    if(path.includes(":port")) {
-        let index = path.indexOf(":port");
-        path = path.substring(0,index);
-    }
-    return path;
+function HideLoadingScreen() {
+    document.querySelector(".loader")?.classList.add("d-none");
+    document.querySelector('main').classList.remove("d-none");
+}
+
+function SetupProjectPage() {
+    BuildProjectItems();
+    document.querySelectorAll(".filters a")?.forEach(item => {
+        item.addEventListener("click",function(){utils.FilterClicked(item)});
+    });
+}
 }

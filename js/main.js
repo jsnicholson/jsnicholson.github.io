@@ -10,7 +10,7 @@ window.onload = function(){
 
     utils.LoadHtmlInto("/footer.html", "footer");
 
-    HideLoadingScreen();
+    utils.HideLoadingScreen();
 
     // this has to be the last thing happening to the body otherwise it doesnt load correctly
     AOS.init({
@@ -19,15 +19,7 @@ window.onload = function(){
     });
 }
 
+// setup functions for specific pages
 window.SetupProjectPage = function() {
-    console.log("setup project page called");
-    build.BuildProjectItems();
-    document.querySelectorAll(".filters a")?.forEach(item => {
-        item.addEventListener("click",function(){utils.FilterClicked(item)});
-    });
+    utils.SetupProjectPage();
 };
-
-function HideLoadingScreen() {
-    document.querySelector(".loader")?.classList.add("d-none");
-    document.querySelector('main').classList.remove("d-none");
-}

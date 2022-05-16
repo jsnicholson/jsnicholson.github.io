@@ -117,4 +117,15 @@ a:hover {
     padding-left:calc(var(--bs-gutter-x) * .5);
     padding-right:calc(var(--bs-gutter-x) * .5);
 }
+
+.carousel-item img {
+    margin:auto;
+    max-height:80vh;
+    max-width:100%;
+}
+
+.remove-scrolling {
+    height:100%;
+    overflow:hidden;
+}
 /* ids */

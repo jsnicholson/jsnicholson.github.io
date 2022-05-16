@@ -1,10 +1,23 @@
-export { LoadHtmlInto, ScrollTo, ScrollToSecondSection, ScrollToTop, BackToHome, FilterClicked, GetBaseUrl };
+export { LoadHtmlInto,
+    ScrollTo,
+    ScrollToSecondSection,
+    ScrollToTop,
+    BackToHome,
+    FilterClicked,
+    HideLoadingScreen,
+    SetupProjectPage,
+    EnableScroll,
+    DisableScroll };
+
+import { ComposeProjectItems } from "/js/compose.js"
 
 function LoadHtmlInto(filename, id) {
-    console.log("load " + filename + " into " + id);
     fetch(filename)
     .then(response => response.text())
-    .then(text => document.getElementById(id).innerHTML = text);
+    .then(text => document.getElementById(id).innerHTML = text)
+    .catch((error) => {
+        console.log("load html failed:",error);
+    });
 }
 
 function ScrollTo(id){
@@ -25,7 +38,6 @@ function BackToHome() {
 }
 
 function FilterClicked(filter) {
-    console.log("filter clicked");
     // remove active from all filters
     let filters = document.querySelectorAll(".filters a");
     filters.forEach(item => {
@@ -56,11 +68,24 @@ function FilterClicked(filter) {
     });
 }
 
-function GetBaseUrl() {
-    let path = window.location.origin;
-    if(path.includes(":port")) {
-        let index = path.indexOf(":port");
-        path = path.substring(0,index);
-    }
-    return path;
+function HideLoadingScreen() {
+    document.querySelector(".loader")?.classList.add("d-none");
+    document.querySelector('main').classList.remove("d-none");
+}
+
+function SetupProjectPage() {
+    ComposeProjectItems();
+    document.querySelectorAll(".filters a")?.forEach(item => {
+        item.addEventListener("click",function(){FilterClicked(item)});
+    });
+}
+
+function EnableScroll() {
+    document.body.classList.remove("remove-scrolling");
+}
+
+function DisableScroll() {
+    let body = document.body;
+    if(body)
+        document.body.classList.add("remove-scrolling");
 }

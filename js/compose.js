@@ -12,7 +12,7 @@ function ComposeSecondSectionScrollButton() {
 }
 
 function ComposeBackToTopButton() {
-    let numSection = document.querySelectorAll("selection").length;
+    let numSection = document.querySelectorAll("section").length;
     if(numSection > 1) {
         let lastSection = document.querySelector("section:last-of-type");
         lastSection.append(BuildBackToTopButton());

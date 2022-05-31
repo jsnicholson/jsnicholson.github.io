@@ -66,6 +66,14 @@ function FilterClicked(filter) {
         }, 10);
         num++;
     });
+    // show all horizontal rules
+    const allHR = document.querySelectorAll(filterType + " hr");
+    allHR.forEach(item => {
+        item.classList.remove("d-none");
+    });
+    //hide final horizontal fule
+    const finalHR = allHR[allHR.length -1];
+    finalHR.classList.add("d-none");
 }
 
 function HideLoadingScreen() {

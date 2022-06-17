@@ -129,4 +129,44 @@ a:hover {
     height:100%;
     overflow:hidden;
 }
+
+.profile-background {
+    background-image: 
+        linear-gradient(
+        #e3e1dad0, 
+        #e3e1dad0
+        ),
+        /* your image */
+        url(/assets/profile.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50%;
+}
+
+@media (min-width: 576px) { 
+    .profile-background {
+        background-size:cover;
+        background-position:20%;
+    }
+}
+
+@media (min-width: 768px) { 
+    .profile-background {
+        background-size:120%;
+        background-position:0% 0%;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-background {
+        background-size:120%;
+        background-position:0% 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .profile-background {
+        background-size:100%;
+    }
+}
 /* ids */

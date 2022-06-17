@@ -1,6 +1,6 @@
-export { ComposeSecondSectionScrollButton, ComposeBackToTopButton, ComposeHomeButton, ComposeProjectItems };
+export { ComposeSecondSectionScrollButton, ComposeBackToTopButton, ComposeHomeButton, ComposeProjectItems, ComposeProjectItemsForHomePage };
 
-import { BuildLocalScrollButton, BuildBackToTopButton, BuildHomeButton, BuildProjectItems } from "/js/build.js";
+import { BuildLocalScrollButton, BuildBackToTopButton, BuildHomeButton, BuildProjectItems, BuildProjectItemsForHomePage } from "/js/build.js";
 import { HOME_EXCLUDE_LIST } from "/js/constants.js";
 
 function ComposeSecondSectionScrollButton() {
@@ -35,4 +35,18 @@ async function ComposeProjectItems() {
     for(const item of items) {
         container.innerHTML+=item;
     }
+}
+
+async function ComposeProjectItemsForHomePage() {
+    const container = document.getElementById("project-list");
+    if(!container)
+        return;
+
+    const existingContent = container.innerHTML;
+    container.innerHTML = "";
+    const items = await BuildProjectItemsForHomePage();
+    for(const item of items) {
+        container.innerHTML+=item;
+    }
+    container.innerHTML+=existingContent;
 }

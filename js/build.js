@@ -1,4 +1,4 @@
-export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildHomeButton };
+export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton };
 
 import { ScrollToSecondSection, ScrollToTop, BackToHome } from "/js/utils.js";
 import { PROJECTS_LIST } from "/js/constants.js";
@@ -36,6 +36,22 @@ async function BuildProjectItems() {
         items.push(BuildProjectItem(project, template));
     }
     
+    return items;
+}
+
+async function BuildProjectItemsForHomePage() {
+    const template = await GetProjectItemTemplate();
+
+    let projects = [];
+    for(const project of PROJECTS_LIST) {
+        if(project.tags.includes("highlighted"))
+            projects.push(project);
+    }
+
+    let items = [];
+    for(const project of projects) {
+        items.push(BuildProjectItem(project, template));
+    }
     return items;
 }
 

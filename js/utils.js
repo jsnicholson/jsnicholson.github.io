@@ -6,10 +6,11 @@ export { LoadHtmlInto,
     FilterClicked,
     HideLoadingScreen,
     SetupProjectPage,
+    SetupProjectsOnHomePage,
     EnableScroll,
     DisableScroll };
 
-import { ComposeProjectItems } from "/js/compose.js"
+import { ComposeProjectItems, ComposeProjectItemsForHomePage } from "/js/compose.js"
 
 function LoadHtmlInto(filename, id) {
     fetch(filename)
@@ -86,6 +87,10 @@ function SetupProjectPage() {
     document.querySelectorAll(".filters a")?.forEach(item => {
         item.addEventListener("click",function(){FilterClicked(item)});
     });
+}
+
+function SetupProjectsOnHomePage() {
+    ComposeProjectItemsForHomePage();
 }
 
 function EnableScroll() {

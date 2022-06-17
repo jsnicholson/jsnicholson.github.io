@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="/js/main.js" type="module"></script>
         <title>Joshua Nicholson</title>
         <!-- meta -->
             <!-- required -->
@@ -44,7 +45,6 @@
             <script src="/vendor/jquery-3.6.0/jquery-3.6.0.slim.min.js"></script>
             <script src="/vendor/aos/js/aos.js"></script>
             <!-- custom -->
-            <script src="/js/main.js" type="module"></script>
     </head>
     <body>
         <nav></nav>
@@ -110,27 +110,7 @@
                         <div class="col-md-4 order-md-5 text-start mb-4">
                             <h1 data-aos="fade-left">Projects</h1>
                         </div>
-                        <div class="col-md-6 mt-3">
-                            <a href="/projects/covid"><div class="row justify-content-md-center" data-aos="fade">
-                                <div class="project-item-content">
-                                    <div class="col"><b>NHS Scotland Covid Passport</b></div>
-                                    <div class="col">c#, xamarin, azure, devops</div>
-                                </div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/notion"><div class="row justify-content-md-center" data-aos="fade">
-                                <div class="project-item-content">
-                                    <div class="col"><b>Notion Random Thought Integration</b></div>
-                                    <div class="col">node.js, serverless function, REST</div>
-                                </div>
-                                <hr style="margin-top:16px;">
-                            </div></a>
-                            <a href="/projects/voxel"><div class="row justify-content-md-center" data-aos="fade">
-                                <div class="project-item-content">
-                                    <div class="col"><b>Voxel Meshing</b></div>
-                                    <div class="col">c++, opengl, sdl, glew, glm</div>
-                                </div>
-                            </div></a>
+                        <div class="col-md-6 mt-3" id="project-list">
                             <div class="row justify-content-center mt-5" data-aos="fade">
                                 <div class="col-auto d-flex align-items-center">
                                     <p class="mb-2">These are just some cherry-picked examples. For a more complete list click below</p>
@@ -145,5 +125,8 @@
             </section>
         </main>
         <footer id="footer"></footer>
+        <script>
+            window.addEventListener("load", () => window.SetupProjectsOnHomePage());
+        </script>
     </body>
 </html>

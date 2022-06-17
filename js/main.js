@@ -24,6 +24,10 @@ window.onload = function(){
 }
 
 // setup functions for specific pages
+window.SetupProjectsOnHomePage = function() {
+    utils.SetupProjectsOnHomePage();
+};
+
 window.SetupProjectPage = function() {
     utils.SetupProjectPage();
 };

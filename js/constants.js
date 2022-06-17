@@ -16,7 +16,7 @@ const PROJECTS_LIST = [
     {
         "title":"Voxel Meshing",
         "technologies":"c++, opengl, sdl, glew, glm",
-        "url":"/projects/voxel",
+        "url":"/construction",
         "tags":"code highlighted"
     },
     {
@@ -34,25 +34,25 @@ const PROJECTS_LIST = [
     {
         "title":"Imgurviewer",
         "technologies":"bootstrap, javascript, REST",
-        "url":"/projects/imgur",
+        "url":"/construction",
         "tags":"code"
     },
     {
         "title":"Personal Website",
         "technologies":"bootstrap, javascript",
-        "url":"/projects/website",
+        "url":"/construction",
         "tags":"code"
     },
     {
         "title":"Company of Heroes Mobile",
         "technologies":"c++ xcode, jira",
-        "url":"/projects/coh",
+        "url":"/construction",
         "tags":"industry code"
     },
     {
         "title":"XCOM2 Mobile",
         "technologies":"c++, unreal, visual studio, jira",
-        "url":"/projects/xcom",
+        "url":"/construction",
         "tags":"industry code"
     },
     {

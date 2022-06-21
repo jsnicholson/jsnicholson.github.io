@@ -16,7 +16,7 @@ const PROJECTS_LIST = [
     {
         "title":"Voxel Meshing",
         "technologies":"c++, opengl, sdl, glew, glm",
-        "url":"/construction",
+        "url":"/projects/voxel",
         "tags":"code highlighted"
     },
     {

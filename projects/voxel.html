@@ -2,7 +2,7 @@
 <html>
     <head>
         <script src="/js/main.js" type="module"></script>
-        <title>Notion</title>
+        <title>Activity</title>
         <!-- meta -->
             <!-- required -->
             <meta charset="utf-8">
@@ -57,8 +57,8 @@
             <section class="height-100 align-items-center p-4 px-md-5 bg-accent-light">
                 <div class="container">
                     <div class="row">
-                        <h1 data-aos="fade-left">Notion Random Thought</h1>
-                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">An integration for the Notion note-taking app</h5>
+                        <h1 data-aos="fade-left">Voxel Meshing</h1>
+                        <h5 class="subheading" data-aos="fade-left" data-aos-delay="50">Dissertation project focused on rendering</h5>
                     </div>
                 </div>
             </section>
@@ -72,31 +72,57 @@
                         <div class="col-md-6 offset-md-1">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                    <p data-aos="fade" data-aos-delay="50">Notion has been my <b>note-taking app of choice</b> for some time now. In particular I find it's <b>simple database</b> functionality extremely useful. However I can be quite a <b>forgetful</b> person so I wanted a system by which I could <b>randomly resurface ideas</b><br><br>My major issue here was that a view into a Notion database can <b>only</b> pull data from a <b>single source</b> but my ideas (or other data) may be spread across <b>many</b> databases with <b>different schemas</b>. Perhaps outside an existing application, a NoSQL database solution would be appropriate but I wanted to continue using Notion</p>
+                                    <p data-aos="fade" data-aos-delay="50">For my dissertation project I chose to attempt implementing an <b>efficient voxel renderer</b> from the ground up. I had recently picked up some lower-level <b>c++</b> side projects and had become interested in playing with <b>opengl</b><br><br>With gameplay potential in an infinitely customisable world (see Minecraft) and greater applications in medicine or teaching, voxel rendering was a great dissertation topic.</p>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <p data-aos="fade" data-aos-delay="100">Originally I created this with a proprietary <b>serverless function</b> service called Pipedream. I have since migrated the system over to <b>AWS Lambda</b> so it sits on a more standardised platform, there is more potential to expand, and I got to learn an industry standard cloud service<br><br>Via <b>Notion's API</b> I could now pull data from many sources, choose some entries at random, create some simple reference items, and push them to a new database</p>
-                                    <br><br>
-                                    <p data-aos="fade" data-aos-delay="150"><b>Source code available at the link below</b></p>
-                                    <div class="text-center" data-aos="fade" data-aos-delay="150"><a href="https://github.com/jsnicholson/notionrandomthought" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:1em;"><b>Github</b></a></div>
+                                    <p data-aos="fade" data-aos-delay="100">I knew that this could get out of hand quickly so I focused primarily on some rendering techniques that could optimise a voxel environment. This had obviously been done before but the exploration is always a good thing.
+                                        <ul data-aos="fade" data-aos-delay="150">
+                                            <li>Greedy meshing</li>
+                                            <li>Instance rendering</li>
+                                            <li>Chunking</li>
+                                        </ul>
+                                    </p>
+                                    <br>
+                                    <p data-aos="fade" data-aos-delay="200"><b>Source code isn't available for this project</b></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- media section -->
+            <section class="height-60 d-flex align-items-center justify-content-center p-4 px-md-5 bg-accent-light">
+                <div id="carouselExampleControls" class="carousel slide carousel-dark w-100" data-bs-interval="false" data-aos="fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="/assets/voxel/sphere_fill.png" class="d-block" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/assets/voxel/sphere_wire.png" class="d-block" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="margin:-10px;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="margin:-10px;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
             <!-- post-analysis section-->
-            <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5 bg-accent-light">
+            <section class="height-80 d-flex align-items-center justify-content-center p-4 px-md-5 bg-light">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 order-md-5 text-start mb-2 mb-md-0">
                             <h1 data-aos="fade-left">Post-analysis</h1>
                         </div>
                         <div class="col-md-4" data-aos="fade" data-aos-delay="50">
-                            <p>This project was a great <b>success</b> and has achieved the goal it was originally intended for. It has provided some <b>fantastic learning</b> for serverless functions, originally in a proprietary system (Pipedream) but also in a standard industrial product (AWS Lambda). Additional experience interacting with REST api is always useful also<br><br>Whilst the goal has been achieved there is always <b>room for improvement</b>. <b>Testing</b> is minimal and <b>error handling</b> has some blindspots. Not that this is on AWS I can begin to leverage its wealth of resources to stablise the system</p>
+                            <p>This project was a very mixed bag in terms of results for me. Ultimately I achieved the goals outlined at the start of the project, exploring efficient methods for voxel rendering. However I had hoped for much more, creating a solid base for a voxel engine that I could take further. This code however sits standalone as there simply wasn't enough time to create this is an extensible way<br><br>I also hoped to explore more rendering methods, especially octrees as it scales up the potential massively. The code base is also messy and I am not happy sharing it publicly as a result. To do so it would require a lot of clean up</p>
                         </div>
                         <div class="col-md-4" data-aos="fade" data-aos-delay="100">
-                            <p>Ultimately I think it would be good to release this as a <b>public product</b> but it requites a lot more tooling. As it currently stands the code can be shared and others can set this system up for themselves in their own Notion workspace but it isn't exactly user-friendly, especially to non-developers<br><br>This may involve setting up AWS Cognito so that users can configure their integration, a simple web page to log in and configure, and a lot more testing. Maybe I'll get round to this in the future</p>
+                            <p>The context in which this project was undertaken isn't quite what I hoped for the outcome. Whilst I learnt plenty of useful information, I had wanted to create a game engine which just isnt feasible for an undergraduate dissertation<br><br>Using the knowledge gained however I do want to get onto an open source voxel engine implementing some fun gameplay ideas and some complex methods. In this way I can hopefully maximise the value gained from this experience</p>
                         </div>
                     </div>
                 </div>

@@ -32,15 +32,9 @@ const PROJECTS_LIST = [
         "tags":"code"
     },
     {
-        "title":"Imgurviewer",
-        "technologies":"bootstrap, javascript, REST",
-        "url":"/construction",
-        "tags":"code"
-    },
-    {
         "title":"Personal Website",
         "technologies":"bootstrap, javascript",
-        "url":"/construction",
+        "url":"/projects/website",
         "tags":"code"
     },
     {

@@ -8,7 +8,8 @@ export { LoadHtmlInto,
     SetupProjectPage,
     SetupProjectsOnHomePage,
     EnableScroll,
-    DisableScroll };
+    DisableScroll,
+    HideHR };
 
 import { ComposeProjectItems, ComposeProjectItemsForHomePage } from "/js/compose.js"
 
@@ -91,6 +92,13 @@ function SetupProjectPage() {
 
 function SetupProjectsOnHomePage() {
     ComposeProjectItemsForHomePage();
+}
+
+function HideHR(text) {
+    const query = "<hr ";
+    const indexOfHR = text.indexOf(query);
+    const result = text.substring(0,indexOfHR+query.length) + "class='d-none' " + text.substring(indexOfHR+query.length);
+    return result;
 }
 
 function EnableScroll() {

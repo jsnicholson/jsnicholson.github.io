@@ -60,6 +60,12 @@ a:hover {
     cursor:pointer;
 }
 
+.anim-bounce {
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
+}
+
 .btn-back {
     position:absolute;
     left:1em;
@@ -169,4 +175,19 @@ a:hover {
         background-size:100%;
     }
 }
+
 /* ids */
+
+/* animations */
+@keyframes bounce {
+    0% {
+        opacity:0;
+        transform:translate(0%,-100%);
+    }
+    50% {
+        opacity:100;
+    }
+    100% {
+        transform:translate(0%,0%);
+    }
+}

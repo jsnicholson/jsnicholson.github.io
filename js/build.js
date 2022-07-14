@@ -13,7 +13,7 @@ function BuildBackToTopButton() {
 
 function BuildLocalScrollButton() {
     let container = document.createElement("div");
-    container.setAttribute("class","local-scroll");
+    container.setAttribute("class","local-scroll anim-bounce");
 
     let img = document.createElement("img");
     img.setAttribute("src","/assets/icon/chevron_down.svg");

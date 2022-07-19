@@ -52,7 +52,7 @@ a:hover {
     min-height:60vh;
 }
 
-.local-scroll {
+.top-scroll {
     position:absolute;
     left:50%;
     bottom:1em;
@@ -64,6 +64,16 @@ a:hover {
     justify-content:center;
     padding:20px;
     transform:translate(-50%,0%);
+}
+
+.bottom-scroll {
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0%);
+    cursor:pointer;
+    height:40px;
+    width:40px;
+    bottom:1em;
 }
 
 .anim-bounce {

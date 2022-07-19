@@ -6,14 +6,14 @@ import { PROJECTS_LIST } from "/js/constants.js";
 function BuildBackToTopButton() {
     let element = document.createElement("img");
     element.setAttribute("src","/assets/icon/chevron_up.svg");
-    element.setAttribute("class","local-scroll");
+    element.setAttribute("class","bottom-scroll");
     element.addEventListener("click",ScrollToTop);
     return element;
 }
 
 function BuildLocalScrollButton() {
     let container = document.createElement("div");
-    container.setAttribute("class","local-scroll");
+    container.setAttribute("class","top-scroll");
 
     let img = document.createElement("img");
     img.setAttribute("src","/assets/icon/chevron_down.svg");

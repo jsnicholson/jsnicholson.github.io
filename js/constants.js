@@ -1,11 +1,11 @@
-export { PROJECTS_LIST, HOME_EXCLUDE_LIST };
+export { PROJECTS_LIST, HOME_EXCLUDE_LIST, CONSTRUCTION_PAGE };
 
 const PROJECTS_LIST = [
     {
         "title":"NHS Scotland Covid Passport",
         "technologies":"c#, xamarin, azure, devops",
         "url":"/projects/covid",
-        "tags":"industry code highlighted"
+        "tags":"highlighted industry code"
     },
     {
         "title":"Notion Random Thought Integration",
@@ -40,13 +40,13 @@ const PROJECTS_LIST = [
     {
         "title":"Company of Heroes Mobile",
         "technologies":"c++ xcode, jira",
-        "url":"/construction",
+        "url":"",
         "tags":"industry code"
     },
     {
         "title":"XCOM2 Mobile",
         "technologies":"c++, unreal, visual studio, jira",
-        "url":"/construction",
+        "url":"",
         "tags":"industry code"
     },
     {
@@ -79,6 +79,18 @@ const PROJECTS_LIST = [
         "url":"/projects/topography",
         "tags":"art"
     },
+    {
+        "title":"Drop-crotch trousers",
+        "technologies":"softshell, unbranded hardware",
+        "url":"",
+        "tags":"clothing"
+    },
+    {
+        "title":"Hakama-inspired trousers",
+        "technologies":"linen, cotton, ykk hardware",
+        "url":"",
+        "tags":"clothing"
+    }
 ];
 
 const HOME_EXCLUDE_LIST = [
@@ -89,3 +101,5 @@ const HOME_EXCLUDE_LIST = [
     "/404",
     "/404.html"
 ];
+
+const CONSTRUCTION_PAGE = "/construction"

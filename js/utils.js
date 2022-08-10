@@ -9,9 +9,13 @@ export { LoadHtmlInto,
     SetupProjectsOnHomePage,
     EnableScroll,
     DisableScroll,
-    HideHR };
+    HideHR,
+    CapitaliseFirstLetter,
+    GetUniqueProjectTags
+};
 
-import { ComposeProjectItems, ComposeProjectItemsForHomePage } from "/js/compose.js"
+import { ComposeProjectItems, ComposeProjectItemsForHomePage, ComposeFilterButtons } from "/js/compose.js"
+import { PROJECTS_LIST } from "/js/constants.js"
 
 function LoadHtmlInto(filename, id) {
     fetch(filename)
@@ -75,7 +79,8 @@ function FilterClicked(filter) {
     });
     //hide final horizontal fule
     const finalHR = allHR[allHR.length -1];
-    finalHR.classList.add("d-none");
+    if(finalHR != undefined)
+        finalHR.classList.add("d-none");
 }
 
 function HideLoadingScreen() {
@@ -84,10 +89,11 @@ function HideLoadingScreen() {
 }
 
 function SetupProjectPage() {
+    ComposeFilterButtons();
     ComposeProjectItems();
-    document.querySelectorAll(".filters a")?.forEach(item => {
-        item.addEventListener("click",function(){FilterClicked(item)});
-    });
+    // document.querySelectorAll(".filters a")?.forEach(item => {
+    //     item.addEventListener("click",function(){FilterClicked(item)});
+    // });
 }
 
 function SetupProjectsOnHomePage() {
@@ -109,4 +115,20 @@ function DisableScroll() {
     let body = document.body;
     if(body)
         document.body.classList.add("remove-scrolling");
+}
+
+function CapitaliseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function GetUniqueProjectTags() {
+    let uniqueTags = [];
+    for(const project of PROJECTS_LIST) {
+        let tags = project.tags.split(" ");
+        for(const tag of tags) {
+            if(!uniqueTags.includes(tag))
+                uniqueTags.push(tag);
+        }
+    }
+    return uniqueTags;
 }

@@ -1,7 +1,7 @@
-export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton };
+export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton };
 
-import { ScrollToSecondSection, ScrollToTop, BackToHome } from "/js/utils.js";
-import { PROJECTS_LIST } from "/js/constants.js";
+import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked } from "/js/utils.js";
+import { PROJECTS_LIST, CONSTRUCTION_PAGE } from "/js/constants.js";
 
 function BuildBackToTopButton() {
     let element = document.createElement("img");
@@ -65,7 +65,12 @@ function BuildProjectItem(data, template) {
     let copy = template;
     copy = copy.replace("{{title}}",data.title);
     copy = copy.replace("{{technologies}}",data.technologies);
-    copy = copy.replace("{{url}}",data.url);
+    
+    if(data.url)
+        copy = copy.replace("{{url}}",data.url);
+    else
+        copy = copy.replace("{{url}}",CONSTRUCTION_PAGE);
+
     copy = copy.replace("{{tags}}",data.tags);
     return copy;
 }
@@ -78,4 +83,12 @@ function BuildHomeButton() {
     btn.setAttribute("data-aos-delay","100");
     btn.addEventListener("click",BackToHome);
     return btn;
+}
+
+function BuildFilterButton(name) {
+    let button = document.createElement("a");
+    button.setAttribute("data-filter","."+name.toLowerCase());
+    button.textContent = CapitaliseFirstLetter(name);
+    button.addEventListener("click",function() {FilterClicked(button)});
+    return button;
 }

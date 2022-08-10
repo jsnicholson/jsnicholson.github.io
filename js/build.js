@@ -1,4 +1,4 @@
-export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton };
+export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton, BuildAllFilterButton };
 
 import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked } from "/js/utils.js";
 import { PROJECTS_LIST, CONSTRUCTION_PAGE } from "/js/constants.js";
@@ -65,7 +65,7 @@ function BuildProjectItem(data, template) {
     let copy = template;
     copy = copy.replace("{{title}}",data.title);
     copy = copy.replace("{{technologies}}",data.technologies);
-    
+
     if(data.url)
         copy = copy.replace("{{url}}",data.url);
     else
@@ -90,5 +90,14 @@ function BuildFilterButton(name) {
     button.setAttribute("data-filter","."+name.toLowerCase());
     button.textContent = CapitaliseFirstLetter(name);
     button.addEventListener("click",function() {FilterClicked(button)});
+    return button;
+}
+
+function BuildAllFilterButton() {
+    let button = document.createElement("a");
+    button.setAttribute("data-filter","a");
+    button.setAttribute("class","active");
+    button.textContent = "All"
+    button.addEventListener("click",function(){FilterClicked(button)});
     return button;
 }

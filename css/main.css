@@ -99,6 +99,7 @@ a:hover {
     margin-right:10px;
     cursor: pointer;
     text-decoration:none;
+    display:inline-block;
 }
 
 .filters a:active {

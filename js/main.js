@@ -10,7 +10,7 @@ window.onload = function(){
     compose.ComposeBackToTopButton();
     compose.ComposeHomeButton();
 
-    utils.LoadHtmlInto("/footer.html", "footer");
+    utils.LoadHtmlInto("/footer.partial.html", "footer");
 
     utils.HideLoadingScreen();
 

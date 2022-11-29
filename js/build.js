@@ -56,7 +56,7 @@ async function BuildProjectItemsForHomePage() {
 }
 
 async function GetProjectItemTemplate() {
-    let response = await fetch("/projects/project-item.html");
+    let response = await fetch("/projects/project-item.partial.html");
     let data = response.text();
     return data;
 }

@@ -81,13 +81,25 @@ const PROJECTS_LIST = [
     },
     {
         "title":"Drop-crotch trousers",
-        "technologies":"softshell, unbranded hardware",
+        "technologies":"softshell, misc hardware",
         "url":"",
         "tags":"clothing"
     },
     {
         "title":"Hakama-inspired trousers",
-        "technologies":"linen, cotton, ykk hardware",
+        "technologies":"linen, cotton, misc hardware",
+        "url":"",
+        "tags":"clothing"
+    },
+    {
+        "title":"Drop-crotch shorts",
+        "technologies":"cotton gabardine, misc hardware",
+        "url":"",
+        "tags":"clothing"
+    },
+    {
+        "title":"Cropped military jacket",
+        "technologies":"recycled military garment, ykk hardware",
         "url":"",
         "tags":"clothing"
     }

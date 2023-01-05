@@ -4,20 +4,26 @@ import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, 
 import { PROJECTS_LIST, CONSTRUCTION_PAGE } from "/js/constants.js";
 
 function BuildBackToTopButton() {
-    let element = document.createElement("img");
-    element.setAttribute("src","/assets/icon/chevron_up.svg");
-    element.setAttribute("class","bottom-scroll");
-    element.addEventListener("click",ScrollToTop);
-    return element;
+    let container = document.createElement("div");
+    container.setAttribute("class","bottom-scroll");
+    container.addEventListener("click",ScrollToTop);
+
+    let img = document.createElement("img");
+    img.setAttribute("src","/assets/icon/chevron_up.svg");
+    img.setAttribute("style","width:50px;height:50px");
+
+
+    container.append(img);
+    return container;
 }
 
 function BuildLocalScrollButton() {
     let container = document.createElement("div");
     container.setAttribute("class","top-scroll");
+    container.addEventListener("click",ScrollToSecondSection)
 
     let img = document.createElement("img");
     img.setAttribute("src","/assets/icon/chevron_down.svg");
-    img.addEventListener("click",ScrollToSecondSection)
     img.setAttribute("class","anim-bounce");
     img.setAttribute("style","width:50px;height:50px;");
 

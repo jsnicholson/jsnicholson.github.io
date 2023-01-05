@@ -58,7 +58,7 @@ a:hover {
     bottom:1em;
     cursor:pointer;
     height:100px;
-    width:100px;
+    width:100%;
     display:flex;
     align-content:center;
     justify-content:center;
@@ -71,8 +71,10 @@ a:hover {
     left:50%;
     transform:translate(-50%,0%);
     cursor:pointer;
-    height:40px;
-    width:40px;
+    display:flex;
+    align-content:center;
+    justify-content: center;
+    width:100%;
     bottom:1em;
 }
 

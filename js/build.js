@@ -1,7 +1,13 @@
-export { BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton, BuildAllFilterButton };
+export { BuildCentreRow, BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton, BuildAllFilterButton };
 
 import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked } from "/js/utils.js";
 import { PROJECTS_LIST, CONSTRUCTION_PAGE } from "/js/constants.js";
+
+function BuildCentreRow() {
+    let row = document.createElement("div");
+    row.setAttribute("class","row justify-content-center");
+    return row;
+}
 
 function BuildBackToTopButton() {
     let container = document.createElement("div");

@@ -1,22 +1,21 @@
 export { ComposeSecondSectionScrollButton, ComposeBackToTopButton, ComposeHomeButton, ComposeProjectItems, ComposeProjectItemsForHomePage, ComposeFilterButtons };
 
-import { BuildLocalScrollButton, BuildBackToTopButton, BuildHomeButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildAllFilterButton, BuildFilterButton } from "/js/build.js";
+import { BuildCentreRow, BuildLocalScrollButton, BuildBackToTopButton, BuildHomeButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildAllFilterButton, BuildFilterButton } from "/js/build.js";
 import { HOME_EXCLUDE_LIST, PROJECTS_LIST } from "/js/constants.js";
 import { HideHR, GetUniqueProjectTags } from "/js/utils.js";
 
 function ComposeSecondSectionScrollButton() {
-    let numSection = document.querySelectorAll("section").length;
-    if(numSection > 1) {
-        let firstSection = document.querySelector("section:first-of-type");
+    let firstSection = document.querySelector("section:first-of-type");
+    if(firstSection != null)
         firstSection.append(BuildLocalScrollButton());
-    }
 }
 
 function ComposeBackToTopButton() {
-    let numSection = document.querySelectorAll("section").length;
-    if(numSection > 1) {
-        let lastSection = document.querySelector("section:last-of-type");
-        lastSection.append(BuildBackToTopButton());
+    let lastSection = document.querySelector("section:last-of-type > .container");
+    if(lastSection != null) {
+        let row = BuildCentreRow();
+        row.append(BuildBackToTopButton());
+        lastSection.append(row);
     }
 }
 

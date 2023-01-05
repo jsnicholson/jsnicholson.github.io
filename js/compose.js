@@ -6,12 +6,14 @@ import { HideHR, GetUniqueProjectTags } from "/js/utils.js";
 
 function ComposeSecondSectionScrollButton() {
     let numSections = document.querySelectorAll("section").length;
+    // only add if there is more than one section (ie. something else to scroll to)
     if(numSections > 1)
         document.querySelector("section:first-of-type").append(BuildLocalScrollButton());
 }
 
 function ComposeBackToTopButton() {
     let numSections = document.querySelectorAll("section").length;
+    // only add if there is more than one section (ie. something else to scroll to)
     if(numSections > 1) {
         let lastSection = document.querySelector("section:last-of-type > .container");
         let row = BuildCentreRow();

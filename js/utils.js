@@ -11,11 +11,12 @@ export { LoadHtmlInto,
     DisableScroll,
     HideHR,
     CapitaliseFirstLetter,
-    GetUniqueProjectTags
+    GetUniqueProjectTags,
+    GetProjectsList
 };
 
 import { ComposeProjectItems, ComposeProjectItemsForHomePage, ComposeFilterButtons } from "/js/compose.js"
-import { PROJECTS_LIST } from "/js/constants.js"
+import { PROJECTS_LIST_PATH } from "/js/constants.js"
 
 function LoadHtmlInto(filename, id) {
     fetch(filename)
@@ -121,9 +122,10 @@ function CapitaliseFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function GetUniqueProjectTags() {
+async function GetUniqueProjectTags() {
     let uniqueTags = [];
-    for(const project of PROJECTS_LIST) {
+    const projectsList = await GetProjectsList();
+    for(const project of projectsList) {
         let tags = project.tags.split(" ");
         for(const tag of tags) {
             if(!uniqueTags.includes(tag))
@@ -131,4 +133,10 @@ function GetUniqueProjectTags() {
         }
     }
     return uniqueTags;
+}
+
+async function GetProjectsList() {
+    let response = await fetch(PROJECTS_LIST_PATH)
+    const json = await response.json();
+    return json.list;
 }

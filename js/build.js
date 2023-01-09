@@ -1,7 +1,7 @@
 export { BuildCentreRow, BuildBackToTopButton, BuildLocalScrollButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildHomeButton, BuildFilterButton, BuildAllFilterButton };
 
-import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked } from "/js/utils.js";
-import { PROJECTS_LIST, CONSTRUCTION_PAGE } from "/js/constants.js";
+import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked, GetProjectsList } from "/js/utils.js";
+import { CONSTRUCTION_PAGE } from "/js/constants.js";
 
 function BuildCentreRow() {
     let row = document.createElement("div");
@@ -43,8 +43,10 @@ async function BuildProjectItems() {
         return;
     const template = await GetProjectItemTemplate();
 
+    const projectsList = await GetProjectsList();
+
     let items = [];
-    for(const project of PROJECTS_LIST) {
+    for(const project of projectsList) {
         items.push(BuildProjectItem(project, template));
     }
     
@@ -54,8 +56,10 @@ async function BuildProjectItems() {
 async function BuildProjectItemsForHomePage() {
     const template = await GetProjectItemTemplate();
 
+    let projectsList = await GetProjectsList();
+    console.log(projectsList);
     let projects = [];
-    for(const project of PROJECTS_LIST) {
+    for(const project of projectsList) {
         if(project.tags.includes("highlighted"))
             projects.push(project);
     }

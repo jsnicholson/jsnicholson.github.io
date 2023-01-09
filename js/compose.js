@@ -1,7 +1,7 @@
 export { ComposeSecondSectionScrollButton, ComposeBackToTopButton, ComposeHomeButton, ComposeProjectItems, ComposeProjectItemsForHomePage, ComposeFilterButtons };
 
 import { BuildCentreRow, BuildLocalScrollButton, BuildBackToTopButton, BuildHomeButton, BuildProjectItems, BuildProjectItemsForHomePage, BuildAllFilterButton, BuildFilterButton } from "/js/build.js";
-import { HOME_EXCLUDE_LIST, PROJECTS_LIST } from "/js/constants.js";
+import { HOME_EXCLUDE_LIST } from "/js/constants.js";
 import { HideHR, GetUniqueProjectTags } from "/js/utils.js";
 
 function ComposeSecondSectionScrollButton() {
@@ -63,7 +63,7 @@ async function ComposeFilterButtons() {
         return;
     
     container.appendChild(await BuildAllFilterButton());
-    let filterNames = GetUniqueProjectTags(PROJECTS_LIST);
+    let filterNames = await GetUniqueProjectTags();
     for(const filter of filterNames)
         container.appendChild(await BuildFilterButton(filter));
 }

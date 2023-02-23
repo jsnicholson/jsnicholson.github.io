@@ -57,7 +57,6 @@ async function BuildProjectItemsForHomePage() {
     const template = await GetProjectItemTemplate();
 
     let projectsList = await GetProjectsList();
-    console.log(projectsList);
     let projects = [];
     for(const project of projectsList) {
         if(project.tags.includes("highlighted"))

@@ -3,6 +3,8 @@ export { BuildCentreRow, BuildBackToTopButton, BuildLocalScrollButton, BuildProj
 import { ScrollToSecondSection, ScrollToTop, BackToHome, CapitaliseFirstLetter, FilterClicked, GetProjectsList } from "/js/utils.js";
 import { CONSTRUCTION_PAGE } from "/js/constants.js";
 
+fakeKey="ba2fa3de-4e1b-4ad1-a305-fd687ec5426e"
+
 function BuildCentreRow() {
     let row = document.createElement("div");
     row.setAttribute("class","row justify-content-center");
